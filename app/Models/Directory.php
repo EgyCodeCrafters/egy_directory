@@ -5,15 +5,35 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
 
 class Directory extends Model
 {
     use CrudTrait;
     use HasFactory;
+    use Sortable;
+
+    // Define the sortable columns
+    public $sortable = ['name', 'category_id', 'description'];
 
     protected $fillable = [
-        'name', 'country_id', 'city_id', 'phone', 'whatsapp', 'address', 'google_map',
-        'category_id', 'notes', 'facebook', 'twitter', 'instagram', 'website',
+        'name',
+        'category_id',
+        'country_id',
+        'city_id',
+        'description',
+        'phone',
+        'whatsapp',
+        'address',
+        'google_map',
+        'notes',
+        'facebook',
+        'email',
+        'twitter',
+        'instagram',
+        'website',
+        'cv_link',
+
     ];
 
     public function country()

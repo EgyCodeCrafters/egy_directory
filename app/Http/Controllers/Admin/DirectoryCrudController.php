@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\DirectoryRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Illuminate\Support\Str;
 
 /**
  * Class DirectoryCrudController
@@ -21,7 +22,7 @@ class DirectoryCrudController extends CrudController
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
-     * 
+     *
      * @return void
      */
     public function setup()
@@ -33,23 +34,40 @@ class DirectoryCrudController extends CrudController
 
     /**
      * Define what happens when the List operation is loaded.
-     * 
+     *
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
     protected function setupListOperation()
     {
-        CRUD::setFromDb(); // set columns from db columns.
-
+//        CRUD::setFromDb(); // set columns from db columns.
         /**
          * Columns can be defined using the fluent syntax:
          * - CRUD::column('price')->type('number');
          */
+//        CRUD::column('country_id')->type('number');
+//        CRUD::column('city_id')->type('number');
+        CRUD::column('name');
+        CRUD::column('description');
+        CRUD::column('phone')->wrapper(['href' => function($crud,$column,$entry){
+            $cleanedLink = Str::of(urldecode($entry->phone))->replaceMatches('/[^a-zA-Z0-9:\/.]/', '');
+            return "tel:". $cleanedLink;
+        }]);
+        CRUD::column('whatsapp')->wrapper(['href' => function($crud,$column,$entry){
+            $cleanedLink = Str::of(urldecode($entry->whatsapp))->replaceMatches('/[^a-zA-Z0-9:\/.]/', '');
+            return "https://wa.me/". $cleanedLink;
+        }]);
+//        CRUD::column('country');
+//        CRUD::column('city');
+        CRUD::column('category');
+        CRUD::column('category')->wrapper(['href' => function($crud,$column,$entry){
+            return  backpack_url("/category/$entry->category_id/show");
+        }]);
     }
 
     /**
      * Define what happens when the Create operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
@@ -66,7 +84,7 @@ class DirectoryCrudController extends CrudController
 
     /**
      * Define what happens when the Update operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */
