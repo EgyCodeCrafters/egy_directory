@@ -38,7 +38,6 @@
                                 <a target="_blank"
                                    href="{{$directory->facebook}}">فيسبوك
                                     <i class="fab fa-facebook"></i>
-
                                 </a>
                             </div>
                         @endif

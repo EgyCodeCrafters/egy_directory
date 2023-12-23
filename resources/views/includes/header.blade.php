@@ -10,6 +10,20 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/">الرئيسية</a>
                 </li>
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link active" aria-current="page"
+                       href="https://www.facebook.com/profile.php?id=61554404983277">
+                        <i class="fab fa-facebook"></i>
+                        فيسبوك</a>
+                </li>
+
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link active" aria-current="page"
+                       href="https://chat.whatsapp.com/IlsC7PnPgXR5dqQbKTIXv5">
+                        <i class="fab fa-whatsapp"></i>
+                        واتساب</a>
+                </li>
+
                 {{--                        <li class="nav-item">--}}
                 {{--                            <a class="nav-link" href="#">Link</a>--}}
                 </li>
