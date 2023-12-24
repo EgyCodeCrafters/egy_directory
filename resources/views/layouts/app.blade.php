@@ -13,10 +13,10 @@
 <div class="container">
 
 
-    @include('includes.header')
+    @include('includes.nav')
 
 
-    <div id="main" class="row">
+    <div class="row">
 
         @if(session('success'))
             <div class="alert alert-success">

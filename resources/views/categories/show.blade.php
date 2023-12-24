@@ -2,14 +2,22 @@
 
 @section('content')
 
-    @if(!count($directories))
+    <div class="jumbotron">
+        <h1 class="display-6">{{$category->name}} ({{count($category->directories)}})</h1>
+        <p class="lead">{{$category->description}}</p>
+        <hr class="my-4">
+    </div>
+
+
+
+    @if(!count($category->directories))
         <div class="alert alert-danger" role="alert">
             التصنيف فازغ
         </div>
 
     @endif
     <div class="row">
-        @foreach ($directories as $directory)
+        @foreach ($category->directories as $directory)
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <div class="card-header">
@@ -43,20 +51,17 @@
                         @endif
 
 
-                @if(!empty($directory->google_map))
+                        @if(!empty($directory->google_map))
                             <div>
-                                 <a target="_blank"
+                                <a target="_blank"
                                    href="{{$directory->google_map}}"> الموقع
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 </a>
-                                
-                           
+
 
                             </div>
                         @endif
-                        
-                   
-                        
+
 
                     </div>
                 </div>

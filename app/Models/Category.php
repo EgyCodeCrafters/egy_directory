@@ -26,4 +26,9 @@ class Category extends Model
         'slug',
         'description',
     ];
+
+    public function directories()
+    {
+        return $this->hasMany(Directory::class);
+    }
 }

@@ -79,4 +79,16 @@ class DirectoryController extends Controller
     {
         //
     }
+    
+     public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $directories = Directory::where('name', 'LIKE', "%$query%")
+            ->orWhere('description', 'LIKE', "%$query%")
+            ->get();
+
+        return view('directories.index', compact('directories'));
+
+    }
 }
