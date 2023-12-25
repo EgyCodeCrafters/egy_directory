@@ -30,7 +30,7 @@
                         <p class="card-text">{{ $directory->description }}</p>
 
 
-                        @if($directory->phone!="الشيخ محمدي عبدالمجيد عبدالجيد -رحمه الله-")
+                        @if($directory->name!="الشيخ محمدي عبدالمجيد عبدالجيد -رحمه الله-")
                             @if(!empty($directory->phone))
                                 <div><a target="_blank" href="tel:{{             Str::of(urldecode($directory->phone))->replaceMatches('/[^a-zA-Z0-9:\/.]/', '')
  }}">{{ $directory->phone }} <i class="fas fa-solid fa-mobile"></i></a></div>
