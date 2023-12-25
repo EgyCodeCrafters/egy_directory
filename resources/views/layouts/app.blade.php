@@ -16,6 +16,7 @@
     @include('includes.nav')
 
 
+
     <div class="row">
 
         @if(session('success'))
@@ -27,6 +28,7 @@
         @yield('content')
 
     </div>
+
 
     <footer class="row">
 

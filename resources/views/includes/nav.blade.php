@@ -23,7 +23,11 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                         @foreach($categories as $category)
-                            <a class="dropdown-item" href="{{url("category/$category->id")}}">{{$category->name}}</a>
+                            <a class="dropdown-item" href="{{url("category/$category->id")}}">
+
+                                {{$category->name}} ({{count($category->directories)}})
+
+                            </a>
                         @endforeach
 
 

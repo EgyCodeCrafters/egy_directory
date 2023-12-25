@@ -1,3 +1,5 @@
+<title>دليل المنصورية | {{$category->name}} </title>
+
 @extends('layouts.app')
 
 @section('content')
