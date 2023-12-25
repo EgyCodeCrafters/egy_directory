@@ -28,14 +28,24 @@
         font-family: 'Noto Kufi Arabic', sans-serif;
     }
 
+    h1, h2 {
+        color: #009ca1;
+    }
+
     a {
-        color: #6c757d;
         text-decoration: none;
     }
 
-
     .card {
         transition: background-color 0.3s ease; /* Transition property for a smooth color change */
+    }
+
+    .card a {
+        color: #333;
+    }
+
+    .card a:hover {
+        color: #009ca1;
     }
 
     .card:hover {

@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="card">
+    <div class="card bg-light mb-3">
         <div class="card-body">
             <h5 class="card-title">اضفة للدليل</h5>
             <div class="row" bp-section="crud-operation-create">
@@ -11,7 +11,7 @@
                             <form  method="post" action="/add-directory" class="needs-validation" novalidate>
 
                         @csrf
-                        <div class="card">
+                        <div class="card bg-light mb-3">
                             <div class="card-body row">
  <div  class="form-group col-sm-6 mb-3">
                                     <label>الاسم</label>
@@ -28,7 +28,7 @@
                                     </select>
                                 </div>
 
-                               
+
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>الوصف</label>
                                     <textarea name="description" class="form-control"></textarea>
@@ -105,7 +105,7 @@
                         </div>
                     </form>
 
-                
+
                 </div>
             </div>
         </div>

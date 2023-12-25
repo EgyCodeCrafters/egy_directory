@@ -13,7 +13,7 @@
     <div class="row">
         @foreach ($categories as $category)
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card bg-light mb-3">
                     <a href="{{ url('category',$category->id) }}">
                         <div class="card-header">
                             <h5 class="card-title">

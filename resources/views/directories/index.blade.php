@@ -11,7 +11,7 @@
     <div class="row">
         @foreach ($directories as $directory)
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card bg-light mb-3">
                     <div class="card-header">
                         <h5 class="card-title">  {{ $directory->name }}</h5>
                     </div>
@@ -49,14 +49,14 @@
                                    href="{{$directory->google_map}}"> الموقع
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 </a>
-                                
-                           
+
+
 
                             </div>
                         @endif
-                        
-                   
-                        
+
+
+
 
                     </div>
                 </div>

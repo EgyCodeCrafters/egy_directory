@@ -50,7 +50,7 @@
 
                 <li class="nav-item">
 
-                    <a href="/add" class="btn btn-primary">اضافة</a>
+                    <a href="/add" class="btn btn-dark">اضافة</a>
                 </li>
 
 
@@ -58,7 +58,7 @@
             <form method="post" action="/search" class="d-flex">
                 @csrf
                 <input class="form-control me-2" name="query" type="search" placeholder="بحث" aria-label="بحث">
-                <button class="btn btn-outline-success" type="submit">بحث</button>
+                <button class="btn btn-outline-dark" type="submit">بحث</button>
             </form>
 
         </div>
