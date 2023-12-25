@@ -6,7 +6,7 @@
             <div class="jumbotron">
                 <h1 class="display-6">أهلا بكم في دليل المنصورية</h1>
                 <p class="lead">خدمة مجانية لتسهيل الوصول لأصحاب المهن وأرباب الحرف.</p>
-                <p>👨⚕️ 🎓 🏫 ⚖️ 🌾 🍳 🔧 🏭 💼 🔬 💻 🎤 🎨 ✈️ 🚀 🚒 👮 🕵️♂️💂 👷</p>
+                <p>👨⚕️ 🎓 🏫 ⚖️ 🌾 🍳 🔧 🏭 💼 🔬 💻 🎤 🎨 ✈️ 🚀 🚒 👮 🕵️💂 👷</p>
                 <iframe width="100%" height="315"
                         src="https://www.youtube.com/embed/3uW3WMcE08w?si=-ubVW7vB_g-WvvPy"
                         title="YouTube video player" frameborder="0"
