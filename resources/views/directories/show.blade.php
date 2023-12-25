@@ -70,7 +70,7 @@
                             <div>
                                 <a target="_blank"
                                    href="{{$directory->telegram}}">تليجرام
-                                    <i class="fa fa-telegram" aria-hidden="true"></i>
+                                    <i class="fab fa-telegram" aria-hidden="true"></i>
                                 </a>
 
                             </div>
@@ -82,7 +82,7 @@
                             <div>
                                 <a target="_blank"
                                    href="{{$directory->youtube}}"> يوتيوب
-                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                    <i class="fab fa-youtube" aria-hidden="true"></i>
                                 </a>
 
                             </div>
