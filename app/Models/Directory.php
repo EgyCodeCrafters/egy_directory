@@ -32,6 +32,9 @@ class Directory extends Model
         'twitter',
         'instagram',
         'website',
+        'youtube',
+        'linkedin',
+        'telegram',
         'cv_link',
 
     ];
