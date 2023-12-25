@@ -69,7 +69,7 @@
                         @if(!empty($directory->telegram))
                             <div>
                                 <a target="_blank"
-                                   href="{{$directory->telegram}}">تلجيرام
+                                   href="{{$directory->telegram}}">تليجرام
                                     <i class="fa fa-telegram" aria-hidden="true"></i>
                                 </a>
 
