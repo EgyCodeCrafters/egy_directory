@@ -14,7 +14,8 @@
 
     @if(!count($category->directories))
         <div class="alert alert-danger" role="alert">
-            التصنيف فازغ
+            التصنيف فارغ ٫ كن الأول واضف نفسك للتصنيف الان <a href="/add" class="btn btn-dark">اضافة</a>
+
         </div>
 
     @endif
