@@ -15,8 +15,6 @@
 
     @include('includes.nav')
 
-
-
     <div class="row">
 
         @if(session('success'))
