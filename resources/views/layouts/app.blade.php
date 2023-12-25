@@ -4,7 +4,7 @@
 
 <head>
 
-    @include('includes.head')
+    @include('partials.head')
 
 </head>
 
@@ -13,7 +13,7 @@
 <div class="container">
 
 
-    @include('includes.nav')
+    @include('partials.nav')
 
     <div class="row">
 
@@ -30,7 +30,7 @@
 
     <footer class="row">
 
-        @include('includes.footer')
+        @include('partials.footer')
 
     </footer>
 
