@@ -57,7 +57,7 @@
                         @if(!empty($directory->google_map))
                             <div>
                                 <a target="_blank"
-                                   href="{{$directory->google_map}}"> الموقع
+                                   href="{{$directory->google_map}}"> الموقع على الخريطة
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 </a>
 
@@ -65,6 +65,37 @@
                             </div>
                         @endif
 
+                        @if(!empty($directory->website))
+                            <div>
+                                <a target="_blank"
+                                   href="{{$directory->website}}"> الموقع الالكتروني
+                                    <i class="fa fa-globe" aria-hidden="true"></i>
+                                </a>
+
+                            </div>
+                        @endif
+
+                        @if(!empty($directory->telegram))
+                            <div>
+                                <a target="_blank"
+                                   href="{{$directory->telegram}}">تلجيرام
+                                    <i class="fa fa-telegram" aria-hidden="true"></i>
+                                </a>
+
+                            </div>
+                        @endif
+
+
+
+                        @if(!empty($directory->youtube))
+                            <div>
+                                <a target="_blank"
+                                   href="{{$directory->youtube}}"> يوتيوب
+                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                </a>
+
+                            </div>
+                        @endif
 
                     </div>
                 </div>

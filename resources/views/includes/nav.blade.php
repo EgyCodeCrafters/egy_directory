@@ -49,7 +49,6 @@
                 </li>
 
                 <li class="nav-item">
-
                     <a href="/add" class="btn btn-dark">اضافة</a>
                 </li>
 
