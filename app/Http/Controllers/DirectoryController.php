@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\CategoryDirectory;
 use App\Models\Directory;
 use Illuminate\Http\Request;
 
@@ -42,8 +43,15 @@ class DirectoryController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'category_ids' => 'required',
         ]);
-        Directory::create($request->all());
+        $directory = Directory::create($request->all());
+        foreach ($request->category_ids as $category_id) {
+            CategoryDirectory::create([
+                'category_id' => $category_id,
+                'directory_id' => $directory->id,
+            ]);
+        }
         return redirect('/')->with('success', 'تمت الاضافة بنجاح');
 
     }
@@ -88,7 +96,7 @@ class DirectoryController extends Controller
             ->orWhere('description', 'LIKE', "%$query%")
             ->get();
 
-        return view('directories.search', compact('directories','query'));
+        return view('directories.search', compact('directories', 'query'));
 
     }
 }

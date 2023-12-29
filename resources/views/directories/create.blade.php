@@ -8,22 +8,25 @@
             <div class="row" bp-section="crud-operation-create">
                 <div class="col-md-12">
 
-                            <form  method="post" action="/add-directory" class="needs-validation" novalidate>
+                    <form method="post" action="/add-directory" class="needs-validation" novalidate>
 
                         @csrf
                         <div class="card bg-light mb-3">
                             <div class="card-body row">
- <div  class="form-group col-sm-6 mb-3">
+                                <div class="form-group col-sm-6 mb-3">
                                     <label>الاسم</label>
                                     <input required type="text" name="name" value="" class="form-control">
                                 </div>
 
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>التخصص</label>
-                                    <select required name="category_id" id="category_id" class="form-control">
+                                    <select multiple required name="category_ids[]" id="category_ids"
+                                            class="form-control">
                                         <option value="">اختصار التصنيف</option>
                                         @foreach($categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->name}} ( {{ $category->description}})</option>
+                                            <option value="{{ $category->id }}">{{ $category->name}}
+                                                ( {{ $category->description}})
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -36,15 +39,19 @@
 
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>الهاتف</label>
-                                    <input  id="phone"  oninput="updatePhoneErrorMessage()" required pattern="^(\+)?[0-9]*$" title="مسموح بارقام انجليزية فقط"  type="text" name="phone" value="" class="form-control">
-                                                <div class="invalid-feedback" id="phone-error-message"></div>
+                                    <input id="phone" oninput="updatePhoneErrorMessage()" required
+                                           pattern="^(\+)?[0-9]*$" title="مسموح بارقام انجليزية فقط" type="text"
+                                           name="phone" value="" class="form-control">
+                                    <div class="invalid-feedback" id="phone-error-message"></div>
 
                                 </div>
 
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>الواتساب</label>
-                                    <input  id="whatsapp"  oninput="updateWhatsappErrorMessage()" required pattern="^(\+)?[0-9]*$" title="مسموح بارقام انجليزية فقط"    type="text" name="whatsapp" value="" class="form-control">
-                                                <div class="invalid-feedback" id="whatsapp-error-message"></div>
+                                    <input id="whatsapp" oninput="updateWhatsappErrorMessage()" required
+                                           pattern="^(\+)?[0-9]*$" title="مسموح بارقام انجليزية فقط" type="text"
+                                           name="whatsapp" value="" class="form-control">
+                                    <div class="invalid-feedback" id="whatsapp-error-message"></div>
 
                                 </div>
 
