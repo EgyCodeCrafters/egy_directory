@@ -49,8 +49,8 @@ class Directory extends Model
         return $this->belongsTo(City::class);
     }
 
-    public function category()
+    public function categories()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsToMany(Category::class);
     }
 }

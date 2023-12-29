@@ -29,6 +29,6 @@ class Category extends Model
 
     public function directories()
     {
-        return $this->hasMany(Directory::class);
+        return $this->belongsToMany(Directory::class);
     }
 }
