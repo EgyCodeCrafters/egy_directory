@@ -18,7 +18,7 @@
 
     <div class="row">
         @foreach ($directories as $directory)
-            @include('partials.directory',$directory)
+            @include('partials.directory',[$directory])
         @endforeach
     </div>
 
