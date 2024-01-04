@@ -77,7 +77,10 @@
                     </li>
                 @endif
             </ul>
-            <span class="badge alert-dark">{{$directory->category->name}}</span>
+            @foreach($directory->categories as $category)
+                <span class="badge alert-dark">{{$category->name}}</span>
+            @endforeach
+
         </div>
     </div>
 </div>
