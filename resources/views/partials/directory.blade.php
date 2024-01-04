@@ -79,7 +79,7 @@
             </ul>
             @foreach($directory->categories as $category)
                 <span class="badge alert-dark"><a
-                        href="{{url("category/$category->id"}}">{{$category->name}}</a>/span>
+                        href='{{url("category/$category->id"}}'>{{$category->name}}</a>/span>
             @endforeach
 
         </div>
