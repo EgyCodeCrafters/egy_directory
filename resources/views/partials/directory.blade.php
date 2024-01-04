@@ -77,6 +77,9 @@
                     </li>
                 @endif
             </ul>
+            @if($category)
+                <span class="badge alert-dark">{{$category->name}}</span>
+            @endif
         </div>
     </div>
 </div>
