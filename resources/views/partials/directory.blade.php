@@ -17,8 +17,10 @@
 
                     @if(!empty($directory->whatsapp))
                         <li>
+
                             <a target="_blank"
-                               href="https://wa.me/+2{{ Str::of(urldecode($directory->whatsapp))->replaceMatches('/[^a-zA-Z0-9:\/.]/', '')  }}">{{ $directory->whatsapp }}
+                               href="https://api.whatsapp.com/send?phone=+2{{ Str::of(urldecode($directory->whatsapp))->replaceMatches('/[^a-zA-Z0-9:\/.]/', '')}}&text=توصلت لرقمك من دليل المنصورية http://directory.egycodecrafters.com/ ">
+                                {{ $directory->whatsapp }}
                                 <i class="fab fa-whatsapp" aria-hidden="true"></i>
                             </a>
                         </li>
