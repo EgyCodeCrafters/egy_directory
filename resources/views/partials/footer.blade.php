@@ -10,6 +10,9 @@
 
 
 <div id="copyright text-right">© جميع الحقوق محفوظة 2023 <a href="https://egycodecrafters.com/">egycodecrafters.com</a>
+    |
+
+    <a href="/privacy-policy">سياسة الخصوصية</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -70,7 +73,8 @@
 
 </script>
 
-<script src="https://app.sendstrap.com/scripts/js/social_button.js?id=4109&key=R2O7D4pfetfOCD6ZvCbddjCgV4MMPuUPhRZapdYy"></script>
+<script
+    src="https://app.sendstrap.com/scripts/js/social_button.js?id=4109&key=R2O7D4pfetfOCD6ZvCbddjCgV4MMPuUPhRZapdYy"></script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
