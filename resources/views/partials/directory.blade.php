@@ -1,12 +1,13 @@
 <div class="col-md-3 mb-3">
     <div class="card bg-light mb-3">
         <div class="card-header">
-            <h5 class="card-title">  {{ $directory->name }}</h5>
+            <a href="{{ url('directory',$directory->id) }}">
+                <h5 class="card-title">  {{ $directory->name }}</h5>
+            </a>
         </div>
         <div class="card-body">
             <p class="card-text">{{ $directory->description }}</p>
             <ul>
-
 
                 @if($directory->name!="الشيخ محمدي عبدالمجيد عبدالجيد -رحمه الله-")
                     @if(!empty($directory->phone))

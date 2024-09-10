@@ -27,16 +27,6 @@ class DirectoryController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        $categories = Category::all();
-        return view('directories.create', compact('categories'));
-
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
@@ -59,11 +49,22 @@ class DirectoryController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        $categories = Category::all();
+        return view('directories.create', compact('categories'));
+
+    }
+
+    /**
      * Display the specified resource.
      */
     public function show(string $id)
     {
-        //
+        $directory = Directory::find($id);
+        return view('directories.show', compact('directory'));
     }
 
     /**
