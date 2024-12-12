@@ -1,6 +1,12 @@
-<title>دليل المنصورية | {{$directory->name}} </title>
+
 
 @extends('layouts.app')
+
+@section('head')
+<title >دليل المنصورية | {{$directory->name}} </title>
+<meta property="og:title" content="دليل المنصورية | {{$directory->name}}">
+@endsection
+
 
 @section('content')
 
