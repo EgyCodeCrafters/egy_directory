@@ -3,9 +3,7 @@
 <html lang="ar" dir="rtl">
 
 <head>
-
     @include('partials.head')
-    @yield('head')
 </head>
 
 <body>

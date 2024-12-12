@@ -1,21 +1,17 @@
 <meta charset="utf-8">
-
-
-
-<title>دليل المنصورية</title>
-
 <!-- load bootstrap from a cdn -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>أهلا بكم في دليل المنصورية</title>
-<meta name="description" content="خدمة مجانية لتسهيل الوصول لأصحاب المهن وأرباب الحرف.">
 
-<!-- Open Graph tags -->
-<meta property="og:title" content="أهلا بكم في دليل المنصورية">
+@hasSection('head')
+    @yield('head')
+@else
+    <title>دليل المنصورية</title>
+    <meta property="og:title" content="دليل المنصورية">
+@endif
+
 <meta property="og:description" content="خدمة مجانية لتسهيل الوصول لأصحاب المهن وأرباب الحرف.">
-<meta property="og:image"
-      content="https://scontent.fcai19-4.fna.fbcdn.net/v/t39.30808-6/412931869_122110012532146832_3761341093869763903_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=yLFRJccHCKoAX90lYwn&_nc_oc=AQnsiJOCma0a8PBD_DU2_fbXFOcM83wL3KsFCt8k0AW-C15D4ll1hhhD2QuPPMl1JHQ&_nc_ht=scontent.fcai19-4.fna&oh=00_AfCVkj320trL2OBjhor_PbjbaJNgAs8TxdWv_AKV3ywvIw&oe=658E2E04"> <!-- Replace with the URL to an image you want to use -->
-<meta property="og:url" content="http://directory.egycodecrafters.com/"> <!-- Replace with the URL to your website -->
+<meta name="description" content="خدمة مجانية لتسهيل الوصول لأصحاب المهن وأرباب الحرف.">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
