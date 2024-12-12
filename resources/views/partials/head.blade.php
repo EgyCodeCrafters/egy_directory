@@ -1,14 +1,9 @@
 <meta charset="utf-8">
 
-<meta name="description" content="">
-
-
-<title>دليل المنصورية</title>
 
 <!-- load bootstrap from a cdn -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>أهلا بكم في دليل المنصورية</title>
 <meta name="description" content="خدمة مجانية لتسهيل الوصول لأصحاب المهن وأرباب الحرف.">
 
 <!-- Open Graph tags -->
