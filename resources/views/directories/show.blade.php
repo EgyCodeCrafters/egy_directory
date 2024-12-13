@@ -3,8 +3,8 @@
 @extends('layouts.app')
 
 @section('head')
-<title>دليل المنصورية | {{$directory->name}}</title>
-<meta property="og:title" content="دليل المنصورية | {{$directory->name}}">
+<title>  {{$directory->name}} |  دليل المنصورية</title>
+<meta property="og:title" content="{{$directory->name}} | دليل المنصورية ">
 @endsection
 
 @section('content')
