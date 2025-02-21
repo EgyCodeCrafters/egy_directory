@@ -41,6 +41,11 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+/**
+ * Important change to ensure the right router version is used with the Laravel API Base package
+ */
+$app->singleton('router', LaravelApiBase\Services\ApiRouter::class);
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application

@@ -8,6 +8,7 @@
         "php": "^8.1",
         "backpack/crud": "^6.4",
         "backpack/theme-tabler": "^1.1",
+        "fadugyamfi/laravel-api-base": "^0.9.7",
         "guzzlehttp/guzzle": "^7.2",
         "kyslik/column-sortable": "^6.5",
         "laravel/framework": "^10.10",

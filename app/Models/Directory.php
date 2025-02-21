@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Kyslik\ColumnSortable\Sortable;
+use LaravelApiBase\Models\ApiModel;
 
-class Directory extends Model
+class Directory extends ApiModel
 {
     use CrudTrait;
     use HasFactory;

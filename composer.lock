@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ef0f64708d4284ae04f11c562bfc449",
+    "content-hash": "dc6405e9140a5db7e5fbf668b633161e",
     "packages": [
         {
             "name": "backpack/basset",
@@ -1149,6 +1149,54 @@
                 }
             ],
             "time": "2023-10-06T06:47:41+00:00"
+        },
+        {
+            "name": "fadugyamfi/laravel-api-base",
+            "version": "0.9.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fadugyamfi/laravel-api-base.git",
+                "reference": "10322d9bbb1a8f33609a5bbc8c777278bb95c47c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fadugyamfi/laravel-api-base/zipball/10322d9bbb1a8f33609a5bbc8c777278bb95c47c",
+                "reference": "10322d9bbb1a8f33609a5bbc8c777278bb95c47c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^5.2|^6|^7|^8|^9|^10|^11",
+                "illuminate/support": "^5.2|^6|^7|^8|^9|^10|^11"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelApiBase\\Providers\\LaravelApiBaseProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelApiBase\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Francis Adu-Gyamfi",
+                    "email": "icewalker2g@yahoo.co.uk"
+                }
+            ],
+            "description": "Laravel Package for easy RESTful API development",
+            "support": {
+                "issues": "https://github.com/fadugyamfi/laravel-api-base/issues",
+                "source": "https://github.com/fadugyamfi/laravel-api-base/tree/0.9.7"
+            },
+            "time": "2024-10-09T15:46:27+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -9047,12 +9095,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.1"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
