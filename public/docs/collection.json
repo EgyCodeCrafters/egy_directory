@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Al Mansouria Directory",
-        "_postman_id": "6bc4ca6e-b977-4a12-ba9e-75f1ecac459c",
+        "_postman_id": "df061132-1569-45de-8855-20fe0d717f66",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -148,7 +148,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "59"
+                                    "value": "43"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -200,12 +200,12 @@
                                 },
                                 {
                                     "key": "fieldName",
-                                    "value": "consequatur",
+                                    "value": "beatae",
                                     "description": "Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/categories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=consequatur"
+                            "raw": "{{baseUrl}}\/api\/categories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=beatae"
                         },
                         "method": "GET",
                         "header": [
@@ -238,7 +238,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "58"
+                                    "value": "42"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -328,7 +328,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "57"
+                                    "value": "41"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -417,7 +417,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "4",
+                                    "value": "13",
                                     "description": "The id of the resource to view"
                                 }
                             ]
@@ -459,7 +459,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "56"
+                                    "value": "40"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -630,7 +630,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "55"
+                                    "value": "39"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -682,12 +682,12 @@
                                 },
                                 {
                                     "key": "fieldName",
-                                    "value": "ea",
+                                    "value": "facere",
                                     "description": "Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/directories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=ea"
+                            "raw": "{{baseUrl}}\/api\/directories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=facere"
                         },
                         "method": "GET",
                         "header": [
@@ -720,7 +720,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "54"
+                                    "value": "38"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -810,7 +810,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "53"
+                                    "value": "37"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -899,7 +899,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "15",
                                     "description": "The id of the resource to view"
                                 }
                             ]
@@ -920,6 +920,12 @@
                     },
                     "response": [
                         {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n \"status\": \"failed\",\n \"message\": \"Resource not found\"\n}",
+                            "name": ""
+                        },
+                        {
                             "header": [
                                 {
                                     "key": "cache-control",
@@ -935,21 +941,15 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "52"
+                                    "value": "36"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"data\":{\"id\":1,\"name\":\"Yvette Solis\",\"description\":\"Sint saepe officiis\",\"phone\":\"0150064746\",\"whatsapp\":\"0150064746\",\"address\":\"Placeat numquam sed\",\"google_map\":\"Et nisi exercitation\",\"notes\":\"Eius officia similiq\",\"email\":\"bigexe@mailinator.com\",\"facebook\":\"Voluptas exercitatio\",\"behance\":null,\"twitter\":\"Sed ea totam veniam\",\"instagram\":\"Dicta dignissimos ea\",\"website\":\"https:\\\/\\\/www.japadekohehiha.cc\",\"cv\":null,\"created_at\":\"2024-09-10T19:00:48.000000Z\",\"updated_at\":\"2024-09-10T19:00:48.000000Z\",\"country_id\":null,\"city_id\":null,\"category_id\":null,\"telegram\":null,\"youtube\":null,\"linkedIn\":null}}",
-                            "name": ""
-                        },
-                        {
-                            "header": [],
                             "code": 404,
-                            "body": "{\n \"status\": \"failed\",\n \"message\": \"Resource not found\"\n}",
+                            "body": "{\"status\":\"failed\",\"message\":\"Resource not found\"}",
                             "name": ""
                         }
                     ]

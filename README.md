@@ -7,4 +7,4 @@
 - `php artisan migrate`
 
 ### Generating API Documentation
-- `php artisan scribe:generate`
+- `php artisan route:clear && php artisan scribe:generate`

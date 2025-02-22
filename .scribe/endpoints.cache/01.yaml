@@ -82,7 +82,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '59'
+          x-ratelimit-remaining: '43'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -170,7 +170,7 @@ endpoints:
         name: fieldName
         description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
         required: false
-        example: consequatur
+        example: illum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -179,7 +179,7 @@ endpoints:
       limit: '3'
       page: 1
       sort: latest
-      fieldName: consequatur
+      fieldName: illum
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -703,7 +703,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '58'
+          x-ratelimit-remaining: '42'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -1323,7 +1323,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '57'
+          x-ratelimit-remaining: '41'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -1428,13 +1428,13 @@ endpoints:
         name: id
         description: 'The id of the resource to view'
         required: true
-        example: 4
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 4
+      id: 20
     queryParameters:
       count:
         name: count
@@ -1476,7 +1476,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
+          x-ratelimit-remaining: '40'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -1682,7 +1682,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '55'
+          x-ratelimit-remaining: '39'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -1770,7 +1770,7 @@ endpoints:
         name: fieldName
         description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
         required: false
-        example: ea
+        example: ut
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1779,7 +1779,7 @@ endpoints:
       limit: '3'
       page: 1
       sort: latest
-      fieldName: ea
+      fieldName: ut
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -2303,7 +2303,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '54'
+          x-ratelimit-remaining: '38'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -2923,7 +2923,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '53'
+          x-ratelimit-remaining: '37'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -3028,13 +3028,13 @@ endpoints:
         name: id
         description: 'The id of the resource to view'
         required: true
-        example: 1
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 19
     queryParameters:
       count:
         name: count
@@ -3060,17 +3060,6 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"data":{"id":1,"name":"Yvette Solis","description":"Sint saepe officiis","phone":"0150064746","whatsapp":"0150064746","address":"Placeat numquam sed","google_map":"Et nisi exercitation","notes":"Eius officia similiq","email":"bigexe@mailinator.com","facebook":"Voluptas exercitatio","behance":null,"twitter":"Sed ea totam veniam","instagram":"Dicta dignissimos ea","website":"https:\/\/www.japadekohehiha.cc","cv":null,"created_at":"2024-09-10T19:00:48.000000Z","updated_at":"2024-09-10T19:00:48.000000Z","country_id":null,"city_id":null,"category_id":null,"telegram":null,"youtube":null,"linkedIn":null}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-      -
         status: 404
         content: |-
           {
@@ -3079,6 +3068,17 @@ endpoints:
           }
         headers: []
         description: ''
+        custom: []
+      -
+        status: 404
+        content: '{"status":"failed","message":"Resource not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '36'
+          access-control-allow-origin: '*'
+        description: null
         custom: []
     responseFields: []
     auth: []

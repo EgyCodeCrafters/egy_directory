@@ -8,8 +8,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
-    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+    <link rel="stylesheet" href="{{ asset("/vendor/scribe/css/theme-default.style.css") }}" media="screen">
+    <link rel="stylesheet" href="{{ asset("/vendor/scribe/css/theme-default.print.css") }}" media="print">
 
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 
@@ -30,9 +30,9 @@
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
-    <script src="../docs/js/tryitout-4.31.0.js"></script>
+    <script src="{{ asset("/vendor/scribe/js/tryitout-4.31.0.js") }}"></script>
 
-    <script src="../docs/js/theme-default-4.31.0.js"></script>
+    <script src="{{ asset("/vendor/scribe/js/theme-default-4.31.0.js") }}"></script>
 
 </head>
 
@@ -41,7 +41,7 @@
 <a href="#" id="nav-button">
     <span>
         MENU
-        <img src="../docs/images/navbar.png" alt="navbar-image"/>
+        <img src="{{ asset("/vendor/scribe/images/navbar.png") }}" alt="navbar-image"/>
     </span>
 </a>
 <div class="tocify-wrapper">
@@ -131,8 +131,8 @@
             </div>
 
     <ul class="toc-footer" id="toc-footer">
-                    <li style="padding-bottom: 5px;"><a href="../docs/collection.json">View Postman collection</a></li>
-                            <li style="padding-bottom: 5px;"><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                    <li style="padding-bottom: 5px;"><a href="{{ route("scribe.postman") }}">View Postman collection</a></li>
+                            <li style="padding-bottom: 5px;"><a href="{{ route("scribe.openapi") }}">View OpenAPI spec</a></li>
                 <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
     </ul>
 
@@ -558,7 +558,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=beatae" \
+    --get "http://localhost:80/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=illum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -572,7 +572,7 @@ const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "beatae",
+    "fieldName": "illum",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1249,10 +1249,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-categories-search"
-               value="beatae"
+               value="illum"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>beatae</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>illum</code></p>
             </div>
                 </form>
 
@@ -2147,14 +2147,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/categories/13" \
+    --get "http://localhost:80/api/categories/20" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/categories/13"
+    "http://localhost:80/api/categories/20"
 );
 
 const headers = {
@@ -2276,10 +2276,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-categories--id-"
-               value="13"
+               value="20"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>13</code></p>
+<p>The id of the resource to view Example: <code>20</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -2794,7 +2794,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=facere" \
+    --get "http://localhost:80/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=ut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2808,7 +2808,7 @@ const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "facere",
+    "fieldName": "ut",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -3485,10 +3485,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-directories-search"
-               value="facere"
+               value="ut"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>facere</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>ut</code></p>
             </div>
                 </form>
 
@@ -4383,14 +4383,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/directories/15" \
+    --get "http://localhost:80/api/directories/19" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/directories/15"
+    "http://localhost:80/api/directories/19"
 );
 
 const headers = {
@@ -4512,10 +4512,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-directories--id-"
-               value="15"
+               value="19"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>15</code></p>
+<p>The id of the resource to view Example: <code>19</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
