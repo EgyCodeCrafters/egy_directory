@@ -168,7 +168,7 @@ endpoints:
         name: fieldName
         description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
         required: false
-        example: quam
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -177,7 +177,7 @@ endpoints:
       limit: '3'
       page: 1
       sort: latest
-      fieldName: quam
+      fieldName: consequatur
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -1426,13 +1426,13 @@ endpoints:
         name: id
         description: 'The id of the resource to view'
         required: true
-        example: 1
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 4
     queryParameters:
       count:
         name: count
@@ -1458,17 +1458,6 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"data":{"id":1,"parent_id":null,"order":1,"name":"dd","slug":"dd","description":"dd","created_at":null,"updated_at":null}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-      -
         status: 404
         content: |-
           {
@@ -1477,6 +1466,17 @@ endpoints:
           }
         headers: []
         description: ''
+        custom: []
+      -
+        status: 404
+        content: '{"status":"failed","message":"Resource not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
         custom: []
     responseFields: []
     auth: []
@@ -1768,7 +1768,7 @@ endpoints:
         name: fieldName
         description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
         required: false
-        example: veniam
+        example: ea
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1777,7 +1777,7 @@ endpoints:
       limit: '3'
       page: 1
       sort: latest
-      fieldName: veniam
+      fieldName: ea
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -3026,13 +3026,13 @@ endpoints:
         name: id
         description: 'The id of the resource to view'
         required: true
-        example: 19
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 19
+      id: 1
     queryParameters:
       count:
         name: count
@@ -3058,6 +3058,17 @@ endpoints:
     fileParameters: []
     responses:
       -
+        status: 200
+        content: '{"data":{"id":1,"name":"Yvette Solis","description":"Sint saepe officiis","phone":"0150064746","whatsapp":"0150064746","address":"Placeat numquam sed","google_map":"Et nisi exercitation","notes":"Eius officia similiq","email":"bigexe@mailinator.com","facebook":"Voluptas exercitatio","behance":null,"twitter":"Sed ea totam veniam","instagram":"Dicta dignissimos ea","website":"https:\/\/www.japadekohehiha.cc","cv":null,"created_at":"2024-09-10T19:00:48.000000Z","updated_at":"2024-09-10T19:00:48.000000Z","country_id":null,"city_id":null,"category_id":null,"telegram":null,"youtube":null,"linkedIn":null}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+      -
         status: 404
         content: |-
           {
@@ -3066,17 +3077,6 @@ endpoints:
           }
         headers: []
         description: ''
-        custom: []
-      -
-        status: 404
-        content: '{"status":"failed","message":"Resource not found"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
-          access-control-allow-origin: '*'
-        description: null
         custom: []
     responseFields: []
     auth: []

@@ -9,8 +9,8 @@
         }
     ],
     "info": {
-        "name": "Laravel",
-        "_postman_id": "4d0b3b2b-2129-4886-afb0-6b27a809d7d3",
+        "name": "Al Mansouria Directory",
+        "_postman_id": "6bc4ca6e-b977-4a12-ba9e-75f1ecac459c",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -200,12 +200,12 @@
                                 },
                                 {
                                     "key": "fieldName",
-                                    "value": "quam",
+                                    "value": "consequatur",
                                     "description": "Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/categories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=quam"
+                            "raw": "{{baseUrl}}\/api\/categories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=consequatur"
                         },
                         "method": "GET",
                         "header": [
@@ -417,7 +417,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "4",
                                     "description": "The id of the resource to view"
                                 }
                             ]
@@ -437,6 +437,12 @@
                         "description": "Returns information about a specific record in this resource. You can return related data or counts of related data\nin the response using the `count` and `contain` query params"
                     },
                     "response": [
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n \"status\": \"failed\",\n \"message\": \"Resource not found\"\n}",
+                            "name": ""
+                        },
                         {
                             "header": [
                                 {
@@ -460,14 +466,8 @@
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"data\":{\"id\":1,\"parent_id\":null,\"order\":1,\"name\":\"dd\",\"slug\":\"dd\",\"description\":\"dd\",\"created_at\":null,\"updated_at\":null}}",
-                            "name": ""
-                        },
-                        {
-                            "header": [],
                             "code": 404,
-                            "body": "{\n \"status\": \"failed\",\n \"message\": \"Resource not found\"\n}",
+                            "body": "{\"status\":\"failed\",\"message\":\"Resource not found\"}",
                             "name": ""
                         }
                     ]
@@ -682,12 +682,12 @@
                                 },
                                 {
                                     "key": "fieldName",
-                                    "value": "veniam",
+                                    "value": "ea",
                                     "description": "Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/directories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=veniam"
+                            "raw": "{{baseUrl}}\/api\/directories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=ea"
                         },
                         "method": "GET",
                         "header": [
@@ -899,7 +899,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "19",
+                                    "value": "1",
                                     "description": "The id of the resource to view"
                                 }
                             ]
@@ -919,12 +919,6 @@
                         "description": "Returns information about a specific record in this resource. You can return related data or counts of related data\nin the response using the `count` and `contain` query params"
                     },
                     "response": [
-                        {
-                            "header": [],
-                            "code": 404,
-                            "body": "{\n \"status\": \"failed\",\n \"message\": \"Resource not found\"\n}",
-                            "name": ""
-                        },
                         {
                             "header": [
                                 {
@@ -948,8 +942,14 @@
                                     "value": "*"
                                 }
                             ],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":1,\"name\":\"Yvette Solis\",\"description\":\"Sint saepe officiis\",\"phone\":\"0150064746\",\"whatsapp\":\"0150064746\",\"address\":\"Placeat numquam sed\",\"google_map\":\"Et nisi exercitation\",\"notes\":\"Eius officia similiq\",\"email\":\"bigexe@mailinator.com\",\"facebook\":\"Voluptas exercitatio\",\"behance\":null,\"twitter\":\"Sed ea totam veniam\",\"instagram\":\"Dicta dignissimos ea\",\"website\":\"https:\\\/\\\/www.japadekohehiha.cc\",\"cv\":null,\"created_at\":\"2024-09-10T19:00:48.000000Z\",\"updated_at\":\"2024-09-10T19:00:48.000000Z\",\"country_id\":null,\"city_id\":null,\"category_id\":null,\"telegram\":null,\"youtube\":null,\"linkedIn\":null}}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
                             "code": 404,
-                            "body": "{\"status\":\"failed\",\"message\":\"Resource not found\"}",
+                            "body": "{\n \"status\": \"failed\",\n \"message\": \"Resource not found\"\n}",
                             "name": ""
                         }
                     ]

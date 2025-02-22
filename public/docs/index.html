@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Laravel Documentation</title>
+    <title>Al Mansouria Directory</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
@@ -558,7 +558,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=quam" \
+    --get "http://localhost:80/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=consequatur" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -572,7 +572,7 @@ const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "quam",
+    "fieldName": "consequatur",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1249,10 +1249,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-categories-search"
-               value="quam"
+               value="consequatur"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>quam</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>consequatur</code></p>
             </div>
                 </form>
 
@@ -2147,14 +2147,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/categories/1" \
+    --get "http://localhost:80/api/categories/4" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/categories/1"
+    "http://localhost:80/api/categories/4"
 );
 
 const headers = {
@@ -2171,7 +2171,17 @@ fetch(url, {
 
 <span id="example-responses-GETapi-categories--id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (404):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;status&quot;: &quot;failed&quot;,
+    &quot;message&quot;: &quot;Resource not found&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -2183,24 +2193,6 @@ x-ratelimit-limit: 60
 x-ratelimit-remaining: 56
 access-control-allow-origin: *
  </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;parent_id&quot;: null,
-        &quot;order&quot;: 1,
-        &quot;name&quot;: &quot;dd&quot;,
-        &quot;slug&quot;: &quot;dd&quot;,
-        &quot;description&quot;: &quot;dd&quot;,
-        &quot;created_at&quot;: null,
-        &quot;updated_at&quot;: null
-    }
-}</code>
- </pre>
-            <blockquote>
-            <p>Example response (404):</p>
-        </blockquote>
-                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;status&quot;: &quot;failed&quot;,
@@ -2284,10 +2276,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-categories--id-"
-               value="1"
+               value="4"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>1</code></p>
+<p>The id of the resource to view Example: <code>4</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -2802,7 +2794,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=veniam" \
+    --get "http://localhost:80/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=ea" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2816,7 +2808,7 @@ const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "veniam",
+    "fieldName": "ea",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -3493,10 +3485,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-directories-search"
-               value="veniam"
+               value="ea"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>veniam</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>ea</code></p>
             </div>
                 </form>
 
@@ -4391,14 +4383,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/directories/19" \
+    --get "http://localhost:80/api/directories/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/directories/19"
+    "http://localhost:80/api/directories/1"
 );
 
 const headers = {
@@ -4415,17 +4407,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-directories--id-">
             <blockquote>
-            <p>Example response (404):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;status&quot;: &quot;failed&quot;,
-    &quot;message&quot;: &quot;Resource not found&quot;
-}</code>
- </pre>
-            <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4437,6 +4419,39 @@ x-ratelimit-limit: 60
 x-ratelimit-remaining: 52
 access-control-allow-origin: *
  </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Yvette Solis&quot;,
+        &quot;description&quot;: &quot;Sint saepe officiis&quot;,
+        &quot;phone&quot;: &quot;0150064746&quot;,
+        &quot;whatsapp&quot;: &quot;0150064746&quot;,
+        &quot;address&quot;: &quot;Placeat numquam sed&quot;,
+        &quot;google_map&quot;: &quot;Et nisi exercitation&quot;,
+        &quot;notes&quot;: &quot;Eius officia similiq&quot;,
+        &quot;email&quot;: &quot;bigexe@mailinator.com&quot;,
+        &quot;facebook&quot;: &quot;Voluptas exercitatio&quot;,
+        &quot;behance&quot;: null,
+        &quot;twitter&quot;: &quot;Sed ea totam veniam&quot;,
+        &quot;instagram&quot;: &quot;Dicta dignissimos ea&quot;,
+        &quot;website&quot;: &quot;https://www.japadekohehiha.cc&quot;,
+        &quot;cv&quot;: null,
+        &quot;created_at&quot;: &quot;2024-09-10T19:00:48.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2024-09-10T19:00:48.000000Z&quot;,
+        &quot;country_id&quot;: null,
+        &quot;city_id&quot;: null,
+        &quot;category_id&quot;: null,
+        &quot;telegram&quot;: null,
+        &quot;youtube&quot;: null,
+        &quot;linkedIn&quot;: null
+    }
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (404):</p>
+        </blockquote>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;status&quot;: &quot;failed&quot;,
@@ -4520,10 +4535,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-directories--id-"
-               value="19"
+               value="1"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>19</code></p>
+<p>The id of the resource to view Example: <code>1</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
