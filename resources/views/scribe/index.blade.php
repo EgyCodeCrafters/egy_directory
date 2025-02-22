@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var tryItOutBaseUrl = "http://localhost:80";
+        var tryItOutBaseUrl = "https://directory.egycodecrafters.com/";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -442,7 +442,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 43
+x-ratelimit-remaining: 59
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -558,7 +558,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=illum" \
+    --get "http://localhost:80/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=aut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -572,7 +572,7 @@ const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "illum",
+    "fieldName": "aut",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -600,7 +600,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 42
+x-ratelimit-remaining: 58
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -1249,10 +1249,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-categories-search"
-               value="illum"
+               value="aut"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>illum</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>aut</code></p>
             </div>
                 </form>
 
@@ -1321,7 +1321,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 41
+x-ratelimit-remaining: 57
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -2147,14 +2147,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/categories/20" \
+    --get "http://localhost:80/api/categories/8" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/categories/20"
+    "http://localhost:80/api/categories/8"
 );
 
 const headers = {
@@ -2190,7 +2190,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 40
+x-ratelimit-remaining: 56
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -2276,10 +2276,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-categories--id-"
-               value="20"
+               value="8"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>20</code></p>
+<p>The id of the resource to view Example: <code>8</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -2678,7 +2678,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 39
+x-ratelimit-remaining: 55
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -2794,7 +2794,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=ut" \
+    --get "http://localhost:80/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=explicabo" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2808,7 +2808,7 @@ const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "ut",
+    "fieldName": "explicabo",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -2836,7 +2836,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 38
+x-ratelimit-remaining: 54
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -3485,10 +3485,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-directories-search"
-               value="ut"
+               value="explicabo"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>ut</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>explicabo</code></p>
             </div>
                 </form>
 
@@ -3557,7 +3557,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 37
+x-ratelimit-remaining: 53
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -4383,14 +4383,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/directories/19" \
+    --get "http://localhost:80/api/directories/14" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/directories/19"
+    "http://localhost:80/api/directories/14"
 );
 
 const headers = {
@@ -4426,7 +4426,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 36
+x-ratelimit-remaining: 52
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
@@ -4512,10 +4512,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-directories--id-"
-               value="19"
+               value="14"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>19</code></p>
+<p>The id of the resource to view Example: <code>14</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
