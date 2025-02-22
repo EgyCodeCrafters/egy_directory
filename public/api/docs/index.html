@@ -8,8 +8,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset("/vendor/scribe/css/theme-default.style.css") }}" media="screen">
-    <link rel="stylesheet" href="{{ asset("/vendor/scribe/css/theme-default.print.css") }}" media="print">
+    <link rel="stylesheet" href="./css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="./css/theme-default.print.css" media="print">
 
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 
@@ -30,9 +30,9 @@
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
-    <script src="{{ asset("/vendor/scribe/js/tryitout-4.31.0.js") }}"></script>
+    <script src="./js/tryitout-4.31.0.js"></script>
 
-    <script src="{{ asset("/vendor/scribe/js/theme-default-4.31.0.js") }}"></script>
+    <script src="./js/theme-default-4.31.0.js"></script>
 
 </head>
 
@@ -41,7 +41,7 @@
 <a href="#" id="nav-button">
     <span>
         MENU
-        <img src="{{ asset("/vendor/scribe/images/navbar.png") }}" alt="navbar-image"/>
+        <img src="./images/navbar.png" alt="navbar-image"/>
     </span>
 </a>
 <div class="tocify-wrapper">
@@ -131,8 +131,8 @@
             </div>
 
     <ul class="toc-footer" id="toc-footer">
-                    <li style="padding-bottom: 5px;"><a href="{{ route("scribe.postman") }}">View Postman collection</a></li>
-                            <li style="padding-bottom: 5px;"><a href="{{ route("scribe.openapi") }}">View OpenAPI spec</a></li>
+                    <li style="padding-bottom: 5px;"><a href="./collection.json">View Postman collection</a></li>
+                            <li style="padding-bottom: 5px;"><a href="./openapi.yaml">View OpenAPI spec</a></li>
                 <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
     </ul>
 
@@ -558,7 +558,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://directory.egycodecrafters.com/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=beatae" \
+    --get "https://directory.egycodecrafters.com/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=quis" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -572,7 +572,7 @@ const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "beatae",
+    "fieldName": "quis",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1249,10 +1249,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-categories-search"
-               value="beatae"
+               value="quis"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>beatae</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>quis</code></p>
             </div>
                 </form>
 
@@ -2147,14 +2147,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://directory.egycodecrafters.com/api/categories/3" \
+    --get "https://directory.egycodecrafters.com/api/categories/14" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://directory.egycodecrafters.com/api/categories/3"
+    "https://directory.egycodecrafters.com/api/categories/14"
 );
 
 const headers = {
@@ -2276,10 +2276,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-categories--id-"
-               value="3"
+               value="14"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>3</code></p>
+<p>The id of the resource to view Example: <code>14</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -2794,7 +2794,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://directory.egycodecrafters.com/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=voluptate" \
+    --get "https://directory.egycodecrafters.com/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=est" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2808,7 +2808,7 @@ const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "voluptate",
+    "fieldName": "est",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -3485,10 +3485,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-directories-search"
-               value="voluptate"
+               value="est"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>voluptate</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>est</code></p>
             </div>
                 </form>
 
@@ -4383,14 +4383,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://directory.egycodecrafters.com/api/directories/2" \
+    --get "https://directory.egycodecrafters.com/api/directories/4" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://directory.egycodecrafters.com/api/directories/2"
+    "https://directory.egycodecrafters.com/api/directories/4"
 );
 
 const headers = {
@@ -4407,7 +4407,17 @@ fetch(url, {
 
 <span id="example-responses-GETapi-directories--id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (404):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;status&quot;: &quot;failed&quot;,
+    &quot;message&quot;: &quot;Resource not found&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4419,39 +4429,6 @@ x-ratelimit-limit: 60
 x-ratelimit-remaining: 52
 access-control-allow-origin: *
  </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: {
-        &quot;id&quot;: 2,
-        &quot;name&quot;: &quot;Fleur Mckee&quot;,
-        &quot;description&quot;: &quot;Ab corrupti quia co&quot;,
-        &quot;phone&quot;: &quot;01067869404&quot;,
-        &quot;whatsapp&quot;: &quot;01067869404&quot;,
-        &quot;address&quot;: &quot;Minim possimus in r&quot;,
-        &quot;google_map&quot;: &quot;Sunt aut rerum esse&quot;,
-        &quot;notes&quot;: &quot;Similique omnis expl&quot;,
-        &quot;email&quot;: &quot;regyp@mailinator.com&quot;,
-        &quot;facebook&quot;: &quot;Ab mollit nesciunt&quot;,
-        &quot;behance&quot;: null,
-        &quot;twitter&quot;: &quot;Velit doloribus prae&quot;,
-        &quot;instagram&quot;: &quot;Qui Nam quos tenetur&quot;,
-        &quot;website&quot;: &quot;https://www.rizozefav.net&quot;,
-        &quot;cv&quot;: null,
-        &quot;created_at&quot;: &quot;2025-02-21T14:38:22.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-21T14:38:22.000000Z&quot;,
-        &quot;country_id&quot;: null,
-        &quot;city_id&quot;: null,
-        &quot;category_id&quot;: null,
-        &quot;telegram&quot;: null,
-        &quot;youtube&quot;: null,
-        &quot;linkedIn&quot;: null
-    }
-}</code>
- </pre>
-            <blockquote>
-            <p>Example response (404):</p>
-        </blockquote>
-                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;status&quot;: &quot;failed&quot;,
@@ -4535,10 +4512,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-directories--id-"
-               value="2"
+               value="4"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>2</code></p>
+<p>The id of the resource to view Example: <code>4</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
