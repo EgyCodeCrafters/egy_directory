@@ -1,0 +1,33 @@
+name: 'Batch Requests'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/batch
+    metadata:
+      groupName: 'Batch Requests'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Batch Request'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
