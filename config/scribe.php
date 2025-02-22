@@ -2,16 +2,18 @@
 
 use Knuckles\Scribe\Extracting\Strategies;
 
+$base_url = 'https://directory.egycodecrafters.com/';
+
 return [
     // The HTML <title> for the generated documentation. If this is empty, Scribe will infer it from config('app.name').
-    'title' => "Al Mansouria Directory",
+    'title' => 'Al Mansouria Directory',
 
     // A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
     'description' => '',
 
     // The base URL displayed in the docs. If this is empty, Scribe will use the value of config('app.url') at generation time.
     // If you're using `laravel` type, you can set this to a dynamic string, like '{{ config("app.tenant_url") }}' to get a dynamic base URL.
-    'base_url' => null,
+    'base_url' => $base_url,
 
     'routes' => [
         [
@@ -74,7 +76,7 @@ return [
     ],
 
     'external' => [
-        'html_attributes' => []
+        'html_attributes' => [],
     ],
 
     'try_it_out' => [
@@ -84,7 +86,7 @@ return [
 
         // The base URL for the API tester to use (for example, you can set this to your staging URL).
         // Leave as null to use the current app URL when generating (config("app.url")).
-        'base_url' => 'https://directory.egycodecrafters.com/',
+        'base_url' => $base_url,
 
         // [Laravel Sanctum] Fetch a CSRF token before each request, and add it as an X-XSRF-TOKEN header.
         'use_csrf' => false,
@@ -122,7 +124,7 @@ return [
     ],
 
     // Text to place in the "Introduction" section, right after the `description`. Markdown and HTML are supported.
-    'intro_text' => <<<INTRO
+    'intro_text' => <<<'INTRO'
 This documentation aims to provide all the information you need to work with our API.
 
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -224,8 +226,8 @@ INTRO
                 [
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json',
-                ]
-            ]
+                ],
+            ],
         ],
         'bodyParameters' => [
             Strategies\BodyParameters\GetFromFormRequest::class,
@@ -241,8 +243,8 @@ INTRO
             Strategies\Responses\UseResponseFileTag::class,
             [
                 Strategies\Responses\ResponseCalls::class,
-                ['only' => ['GET *']]
-            ]
+                ['only' => ['GET *']],
+            ],
         ],
         'responseFields' => [
             Strategies\ResponseFields\GetFromResponseFieldAttribute::class,

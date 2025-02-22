@@ -146,7 +146,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost:80</code>
+    <strong>Base URL</strong>: <code>https://directory.egycodecrafters.com/</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -172,14 +172,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:80/api/batch" \
+    "https://directory.egycodecrafters.com/api/batch" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/batch"
+    "https://directory.egycodecrafters.com/api/batch"
 );
 
 const headers = {
@@ -284,14 +284,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/user" \
+    --get "https://directory.egycodecrafters.com/api/user" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/user"
+    "https://directory.egycodecrafters.com/api/user"
 );
 
 const headers = {
@@ -409,14 +409,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/categories/count" \
+    --get "https://directory.egycodecrafters.com/api/categories/count" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/categories/count"
+    "https://directory.egycodecrafters.com/api/categories/count"
 );
 
 const headers = {
@@ -558,21 +558,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=aut" \
+    --get "https://directory.egycodecrafters.com/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=qui" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/categories/search"
+    "https://directory.egycodecrafters.com/api/categories/search"
 );
 
 const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "aut",
+    "fieldName": "qui",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1249,10 +1249,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-categories-search"
-               value="aut"
+               value="qui"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>aut</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>qui</code></p>
             </div>
                 </form>
 
@@ -1280,14 +1280,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/categories?limit=3&amp;page=1&amp;sort=latest" \
+    --get "https://directory.egycodecrafters.com/api/categories?limit=3&amp;page=1&amp;sort=latest" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/categories"
+    "https://directory.egycodecrafters.com/api/categories"
 );
 
 const params = {
@@ -1992,14 +1992,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:80/api/categories" \
+    "https://directory.egycodecrafters.com/api/categories" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/categories"
+    "https://directory.egycodecrafters.com/api/categories"
 );
 
 const headers = {
@@ -2147,14 +2147,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/categories/8" \
+    --get "https://directory.egycodecrafters.com/api/categories/14" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/categories/8"
+    "https://directory.egycodecrafters.com/api/categories/14"
 );
 
 const headers = {
@@ -2276,10 +2276,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-categories--id-"
-               value="8"
+               value="14"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>8</code></p>
+<p>The id of the resource to view Example: <code>14</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -2321,14 +2321,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:80/api/categories/1" \
+    "https://directory.egycodecrafters.com/api/categories/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/categories/1"
+    "https://directory.egycodecrafters.com/api/categories/1"
 );
 
 const headers = {
@@ -2501,14 +2501,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:80/api/categories/1" \
+    "https://directory.egycodecrafters.com/api/categories/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/categories/1"
+    "https://directory.egycodecrafters.com/api/categories/1"
 );
 
 const headers = {
@@ -2645,14 +2645,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/directories/count" \
+    --get "https://directory.egycodecrafters.com/api/directories/count" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/directories/count"
+    "https://directory.egycodecrafters.com/api/directories/count"
 );
 
 const headers = {
@@ -2794,21 +2794,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=explicabo" \
+    --get "https://directory.egycodecrafters.com/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=enim" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/directories/search"
+    "https://directory.egycodecrafters.com/api/directories/search"
 );
 
 const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "explicabo",
+    "fieldName": "enim",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -3485,10 +3485,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-directories-search"
-               value="explicabo"
+               value="enim"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>explicabo</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>enim</code></p>
             </div>
                 </form>
 
@@ -3516,14 +3516,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/directories?limit=3&amp;page=1&amp;sort=latest" \
+    --get "https://directory.egycodecrafters.com/api/directories?limit=3&amp;page=1&amp;sort=latest" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/directories"
+    "https://directory.egycodecrafters.com/api/directories"
 );
 
 const params = {
@@ -4228,14 +4228,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:80/api/directories" \
+    "https://directory.egycodecrafters.com/api/directories" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/directories"
+    "https://directory.egycodecrafters.com/api/directories"
 );
 
 const headers = {
@@ -4383,14 +4383,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:80/api/directories/14" \
+    --get "https://directory.egycodecrafters.com/api/directories/3" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/directories/14"
+    "https://directory.egycodecrafters.com/api/directories/3"
 );
 
 const headers = {
@@ -4512,10 +4512,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-directories--id-"
-               value="14"
+               value="3"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>14</code></p>
+<p>The id of the resource to view Example: <code>3</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -4557,14 +4557,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:80/api/directories/1" \
+    "https://directory.egycodecrafters.com/api/directories/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/directories/1"
+    "https://directory.egycodecrafters.com/api/directories/1"
 );
 
 const headers = {
@@ -4737,14 +4737,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:80/api/directories/1" \
+    "https://directory.egycodecrafters.com/api/directories/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:80/api/directories/1"
+    "https://directory.egycodecrafters.com/api/directories/1"
 );
 
 const headers = {

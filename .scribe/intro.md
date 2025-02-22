@@ -3,7 +3,7 @@
 
 
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost:80</code>
+    <strong>Base URL</strong>: <code>https://directory.egycodecrafters.com/</code>
 </aside>
 
 This documentation aims to provide all the information you need to work with our API.
