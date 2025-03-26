@@ -43,9 +43,9 @@
 
                 <li class="nav-item">
                     <a target="_blank" class="nav-link active" aria-current="page"
-                       href="https://www.facebook.com/profile.php?id=61554404983277">
+                       href="https://play.google.com/store/apps/details?id=com.mokhalid.home_service">
                         <i class="fab fa-facebook"></i>
-                        فيسبوك</a>
+                        تطبيق الأندرويد</a>
                 </li>
 
                 <li class="nav-item">
