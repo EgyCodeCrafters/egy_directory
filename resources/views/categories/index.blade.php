@@ -25,18 +25,25 @@
         <section class="bg-primary text-white text-center py-5">
             <div class="container">
                 <h2 class="fw-bold text-white">حمّل تطبيق دليل المنصورية الآن! 📱</h2>
-                <p class="lead mt-3">أسهل طريقة للوصول إلى أرقام وأعمال المنصورية بين يديك! حمل التطبيق الآن واستمتع بتجربة سلسة وسريعة.</p>
+                <p class="lead mt-3">أسهل طريقة للوصول إلى أرقام وأعمال المنصورية بين يديك! حمل التطبيق الآن واستمتع
+                    بتجربة سلسة وسريعة.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.mokhalid.home_service"
+                   class="btn btn-light btn-lg">
 
-                <div class="d-flex justify-content-center gap-3 mt-4">
-                    <a href="https://play.google.com/store/apps/details?id=com.mokhalid.home_service" class="btn btn-light btn-lg">
+                    <div class="d-flex justify-content-center gap-3 mt-4">
                         <i class="fab fa-google-play"></i> تحميل من Google Play
-                    </a>
-                </div>
+                    </div>
 
-                <img src="https://play-lh.googleusercontent.com/3w3jUXVvsDZ_RFMPKWbgC57udQAXRXQ725_gU1JK4cexXdu1XCubmYE-nqAjG_Y8A0sJ=w5120-h2880-rw" alt="صورة التطبيق" class="img-fluid mt-4" style="max-width: 400px;">
+                    <img src="https://play-lh.googleusercontent.com/3w3jUXVvsDZ_RFMPKWbgC57udQAXRXQ725_gU1JK4cexXdu1XCubmYE-nqAjG_Y8A0sJ=w5120-h2880-rw"
+                         alt="صورة التطبيق" class="img-fluid mt-4" style="max-width: 400px;">
+                </a>
+
             </div>
         </section>
 
+        <div class="row">
+
+        </div>
         <section class="row">
             @foreach ($categories as $category)
                 <div class="col-md-3 mb-3">
