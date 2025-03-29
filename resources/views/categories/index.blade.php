@@ -24,7 +24,7 @@
 
         <section class="bg-primary text-white text-center py-5">
             <div class="container">
-                <h2 class="fw-bold">حمّل تطبيق دليل المنصورية الآن! 📱</h2>
+                <h2 class="fw-bold text-white">حمّل تطبيق دليل المنصورية الآن! 📱</h2>
                 <p class="lead mt-3">أسهل طريقة للوصول إلى أرقام وأعمال المنصورية بين يديك! حمل التطبيق الآن واستمتع بتجربة سلسة وسريعة.</p>
 
                 <div class="d-flex justify-content-center gap-3 mt-4">
@@ -33,7 +33,7 @@
                     </a>
                 </div>
 
-                <img src="app-mockup.png" alt="صورة التطبيق" class="img-fluid mt-4" style="max-width: 400px;">
+                <img src="https://play-lh.googleusercontent.com/3w3jUXVvsDZ_RFMPKWbgC57udQAXRXQ725_gU1JK4cexXdu1XCubmYE-nqAjG_Y8A0sJ=w5120-h2880-rw" alt="صورة التطبيق" class="img-fluid mt-4" style="max-width: 400px;">
             </div>
         </section>
 
