@@ -2,7 +2,7 @@
 
 <div class="container">
     @section('content')
-        <div class="row">
+        <section class="row">
             <div class="jumbotron">
 
 
@@ -18,10 +18,26 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
 
-            </div>
-        </div>
 
-        <div class="row">
+            </div>
+        </section>
+
+        <section class="bg-primary text-white text-center py-5">
+            <div class="container">
+                <h2 class="fw-bold">حمّل تطبيق دليل المنصورية الآن! 📱</h2>
+                <p class="lead mt-3">أسهل طريقة للوصول إلى أرقام وأعمال المنصورية بين يديك! حمل التطبيق الآن واستمتع بتجربة سلسة وسريعة.</p>
+
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="https://play.google.com/store/apps/details?id=com.mokhalid.home_service" class="btn btn-light btn-lg">
+                        <i class="fab fa-google-play"></i> تحميل من Google Play
+                    </a>
+                </div>
+
+                <img src="app-mockup.png" alt="صورة التطبيق" class="img-fluid mt-4" style="max-width: 400px;">
+            </div>
+        </section>
+
+        <section class="row">
             @foreach ($categories as $category)
                 <div class="col-md-3 mb-3">
                     <div class="card bg-light mb-3">
@@ -39,6 +55,6 @@
                     </div>
                 </div>
             @endforeach
-        </div>
+        </section>
     @endsection
 </div>
