@@ -23,7 +23,7 @@
         </div>
 
     <div class="row">
-        <section class=" bg-primary text-white text-center py-5">
+        <section class=" bg-primary text-white text-center py-5  mb-5">
             <div class="container">
                 <h2 class="fw-bold text-white">حمّل تطبيق دليل المنصورية الآن! 📱</h2>
                 <p class="lead mt-3">أسهل طريقة للوصول إلى أرقام وأعمال المنصورية بين يديك! حمل التطبيق الآن واستمتع
