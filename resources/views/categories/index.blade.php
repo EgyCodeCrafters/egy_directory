@@ -35,8 +35,10 @@
                         <i class="fab fa-google-play"></i> تحميل من Google Play
                     </div>
 
-                    <img src="https://play-lh.googleusercontent.com/3w3jUXVvsDZ_RFMPKWbgC57udQAXRXQ725_gU1JK4cexXdu1XCubmYE-nqAjG_Y8A0sJ=w5120-h2880-rw"
-                         alt="صورة التطبيق" class="img-fluid mt-4" style="max-width: 400px;">
+
+                    <div class="mt-4">
+                        <img src="https://play-lh.googleusercontent.com/3w3jUXVvsDZ_RFMPKWbgC57udQAXRXQ725_gU1JK4cexXdu1XCubmYE-nqAjG_Y8A0sJ=w5120-h2880-rw" alt="صورة التطبيق" class="img-fluid w-50 w-md-75 w-sm-100">
+                    </div>
                 </a>
 
             </div>
