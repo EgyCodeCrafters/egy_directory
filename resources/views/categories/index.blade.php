@@ -29,7 +29,7 @@
                 <p class="lead mt-3">أسهل طريقة للوصول إلى أرقام وأعمال المنصورية بين يديك! حمل التطبيق الآن واستمتع
                     بتجربة سلسة وسريعة.</p>
                 <a href="https://play.google.com/store/apps/details?id=com.mokhalid.home_service"
-                   class="btn btn-light btn-lg">
+                 >
 
                     <div class="d-flex justify-content-center gap-3 mt-4">
                         <i class="fab fa-google-play"></i> تحميل من Google Play
