@@ -10,9 +10,6 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 
-                <li class="nav-item">
-                    <a href="/" class="nav-link">الرئيسية</a>
-                </li>
 
 
                 <li class="nav-item dropdown">
