@@ -23,7 +23,7 @@
         </div>
 
     <div class="row">
-        <section class=" bg-primary text-white text-center py-5  mb-5">
+        <section class=" bg-info text-white text-center py-5  mb-5">
             <div class="container">
                 <h2 class="fw-bold text-white">حمّل تطبيق دليل المنصورية الآن! 📱</h2>
                 <p class="lead mt-3">أسهل طريقة للوصول إلى أرقام وأعمال المنصورية بين يديك! حمل التطبيق الآن واستمتع
@@ -31,7 +31,7 @@
                 <a href="https://play.google.com/store/apps/details?id=com.mokhalid.home_service"
                >
 
-                    <div class="btn btn-success">
+                    <div class="btn btn-primary">
                         <i class="fab fa-google-play"></i> تحميل من Google Play
                     </div>
 

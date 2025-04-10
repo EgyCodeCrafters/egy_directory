@@ -46,7 +46,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="/add" class="btn btn-dark">اضافة</a>
+                    <a href="/add" class="btn btn-primary">اضافة</a>
                 </li>
 
 
