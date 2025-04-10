@@ -38,9 +38,6 @@
         font-family: 'Noto Kufi Arabic', sans-serif;
     }
 
-    h1, h2 {
-        color: #009ca1;
-    }
 
     a {
         text-decoration: none;
@@ -54,13 +51,7 @@
         color: #333;
     }
 
-    .card a:hover {
-        color: #009ca1;
-    }
 
-    .card:hover {
-        background-color: #eee; /* Change this to your desired primary color */
-    }
 
 
     .jumbotron {
