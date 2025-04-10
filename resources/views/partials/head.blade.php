@@ -34,7 +34,7 @@
 <style>
     body {
         font-size: larger;
-        font-family: "Amiri", serif;
+        font-family: "Amiri", serif !important;
 
     }
 
