@@ -54,7 +54,9 @@
     color: #eee;
 }
 
-
+    .card-title {
+        font-size: inherit !important;
+    }
 
     .jumbotron {
 
