@@ -34,7 +34,7 @@
 
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>الوصف</label>
-                                    <textarea name="description" class="form-control"></textarea>
+                                    <textarea maxlength="100"  name="description" class="form-control"></textarea>
                                 </div>
 
                                 <div class="form-group col-sm-6 mb-3">
