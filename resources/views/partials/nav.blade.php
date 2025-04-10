@@ -1,4 +1,4 @@
-<nav class="row navbar navbar-expand-lg navbar-light bg-light">
+<nav class="row  mb-4 navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">دليل المنصورية</a>
 
@@ -64,4 +64,3 @@
     </div>
 </nav>
 
-<div class="row"></div>
