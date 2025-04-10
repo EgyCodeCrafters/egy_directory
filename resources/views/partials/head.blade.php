@@ -18,7 +18,7 @@
       integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
 
 <!-- Bootswatch theme -->
-<link href="https://bootswatch.com/5/sketchy/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="https://bootswatch.com/5/cerulean/bootstrap.rtl.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
@@ -29,12 +29,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
 
 <style>
     body {
         font-size: larger;
-        font-family: "Amiri", serif !important;
+        font-family: "Lateef", serif !important;
 
     }
 
