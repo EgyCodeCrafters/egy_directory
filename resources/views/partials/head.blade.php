@@ -26,16 +26,16 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-        href="https://fonts.googleapis.com/css2?family=Cairo&family=Karla:ital,wght@1,300&family=Noto+Kufi+Arabic:wght@600&display=swap"
-        rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 <style>
     body {
         font-size: larger;
+        font-family: "Amiri", serif;
 
-        font-family: 'Noto Kufi Arabic', sans-serif;
     }
 
     h1, h2 {
