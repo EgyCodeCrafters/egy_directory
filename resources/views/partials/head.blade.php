@@ -50,7 +50,9 @@
     .card a {
         color: #333;
     }
-
+.card .alert-dark a{
+    color: #eee;
+}
 
 
 
