@@ -83,12 +83,15 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var navbarCollapse = document.getElementById("navbarNav");
         if (window.innerWidth < 992) {
-            navbarCollapse.classList.add("show");
+            const toggler = document.querySelector(".navbar-toggler");
+            if (toggler) {
+                toggler.click(); // simulate click
+            }
         }
     });
 </script>
+
 </body>
 
 
