@@ -73,8 +73,6 @@
 
 </script>
 
-<script
-    src="https://app.sendstrap.com/scripts/js/social_button.js?id=4109&key=R2O7D4pfetfOCD6ZvCbddjCgV4MMPuUPhRZapdYy"></script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -82,6 +80,15 @@
 
 <script async src="https://static.addtoany.com/menu/page.js"></script>
 <!-- AddToAny END -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var navbarCollapse = document.getElementById("navbarNav");
+        if (window.innerWidth < 992) {
+            navbarCollapse.classList.add("show");
+        }
+    });
+</script>
 </body>
 
 
