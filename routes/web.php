@@ -15,5 +15,6 @@ Route::get('privacy-policy', function () {
 
 Route::get('/clear-route-cache', function () {
     Artisan::call('route:clear');
+
     return 'Route cache cleared successfully.';
 });

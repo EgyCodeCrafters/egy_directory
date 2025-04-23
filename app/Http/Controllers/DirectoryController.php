@@ -44,6 +44,7 @@ class DirectoryController extends Controller
                 'directory_id' => $directory->id,
             ]);
         }
+
         return redirect('/')->with('success', 'تمت الاضافة بنجاح');
 
     }
@@ -54,6 +55,7 @@ class DirectoryController extends Controller
     public function create()
     {
         $categories = Category::all();
+
         return view('directories.create', compact('categories'));
 
     }
@@ -64,6 +66,7 @@ class DirectoryController extends Controller
     public function show(string $id)
     {
         $directory = Directory::find($id);
+
         return view('directories.show', compact('directory'));
     }
 

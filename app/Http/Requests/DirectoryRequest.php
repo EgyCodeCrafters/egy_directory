@@ -3,8 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use LaravelApiBase\Http\Requests\ApiFormRequest;
 
-class DirectoryRequest extends FormRequest
+class DirectoryRequest extends FormRequest implements ApiFormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,7 +15,8 @@ class DirectoryRequest extends FormRequest
     public function authorize()
     {
         // only allow updates if the user is logged in
-        return backpack_auth()->check();
+        //    return backpack_auth()->check();
+        return true;
     }
 
     /**
@@ -25,8 +27,12 @@ class DirectoryRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name' => 'required|string',
+            'phone' => 'required|string',
+            'description' => 'required|string',
+            'category_ids' => 'required',
         ];
+
     }
 
     /**
@@ -50,6 +56,28 @@ class DirectoryRequest extends FormRequest
     {
         return [
             //
+        ];
+    }
+
+    public function bodyParameters()
+    {
+        return [
+            'name' => [
+                'description' => 'name of directory',
+                'example' => 'Publish Library',
+            ],
+            'description' => [
+                'description' => 'Description of directory',
+                'example' => 'Remember to publish library code',
+            ],
+            'phone' => [
+                'description' => 'phone of directory',
+                'example' => '01150064538',
+            ],
+            'category_ids' => [
+                'description' => 'list of categories of directory',
+                'example' => '[1,2,3]',
+            ],
         ];
     }
 }

@@ -33,7 +33,7 @@ class CreateDirectoriesTable extends Migration
 
             $table->foreign('country_id')->references('id')->on('countries');
             $table->foreign('city_id')->references('id')->on('cities');
-//            $table->foreign('category_id')->references('id')->on('categories');
+            //            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

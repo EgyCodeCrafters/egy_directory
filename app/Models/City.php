@@ -10,6 +10,7 @@ class City extends Model
 {
     use CrudTrait;
     use HasFactory;
+
     /**
      * The attributes that are mass assignable.
      *
