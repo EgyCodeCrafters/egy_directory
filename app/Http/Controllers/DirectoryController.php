@@ -37,7 +37,7 @@ class DirectoryController extends Controller
         ]);
         $directory = Directory::create($request->all());
 
-        $selectedCategories = array_filter($request->input('category_ids'));
+        $selectedCategories = array_filter($request->category_ids);
         foreach ($selectedCategories as $category_id) {
             CategoryDirectory::create([
                 'category_id' => $category_id,
