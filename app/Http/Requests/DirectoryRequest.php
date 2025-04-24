@@ -30,6 +30,7 @@ class DirectoryRequest extends FormRequest implements ApiFormRequest
             'name' => 'required|string',
             'phone' => 'required|string',
             'description' => 'required|string',
+            'address' => 'required|string',
             'category_ids' => 'required',
         ];
 
@@ -68,6 +69,10 @@ class DirectoryRequest extends FormRequest implements ApiFormRequest
             ],
             'description' => [
                 'description' => 'Description of directory',
+                'example' => 'Remember to publish library code',
+            ],
+            'address' => [
+                'description' => 'address of directory',
                 'example' => 'Remember to publish library code',
             ],
             'phone' => [
