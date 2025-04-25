@@ -28,7 +28,8 @@ class DirectoryRequest extends FormRequest implements ApiFormRequest
     {
         return [
             'name' => 'required|string',
-            'phone' => 'required|string',
+            'phone' => 'required|string|unique',
+            'whatsapp' => 'string|unique',
             'description' => 'required|string',
             'address' => 'required|string',
             'category_ids' => 'required',
