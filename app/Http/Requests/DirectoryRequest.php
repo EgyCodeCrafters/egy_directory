@@ -3,86 +3,78 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use LaravelApiBase\Http\Requests\ApiFormRequest;
 
-class DirectoryRequest extends FormRequest implements ApiFormRequest
+class DirectoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
-     * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
-        // only allow updates if the user is logged in
-        //    return backpack_auth()->check();
         return true;
     }
 
     /**
      * Get the validation rules that apply to the request.
-     *
-     * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            'name' => 'required|string',
-            'phone' => 'required|string|unique',
-            'whatsapp' => 'string|unique',
+            'name' => 'required|string|max:255',
+            'phone' => 'required|string|unique:directories,phone',
+            'whatsapp' => 'nullable|string|unique:directories,whatsapp',
             'description' => 'required|string',
             'address' => 'required|string',
-            'category_ids' => 'required',
-        ];
-
-    }
-
-    /**
-     * Get the validation attributes that apply to the request.
-     *
-     * @return array
-     */
-    public function attributes()
-    {
-        return [
-            //
+            'category_ids' => 'required|array',
+            'category_ids.*' => 'integer|exists:categories,id',
         ];
     }
 
     /**
-     * Get the validation messages that apply to the request.
-     *
-     * @return array
+     * Get the validation attributes.
      */
-    public function messages()
+    public function attributes(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
-    public function bodyParameters()
+    /**
+     * Get the validation messages.
+     */
+    public function messages(): array
+    {
+        return [];
+    }
+
+    /**
+     * If using a package like mpociot/laravel-apidoc-generator.
+     */
+    public function bodyParameters(): array
     {
         return [
             'name' => [
-                'description' => 'name of directory',
+                'description' => 'Name of the directory.',
                 'example' => 'Publish Library',
             ],
             'description' => [
-                'description' => 'Description of directory',
-                'example' => 'Remember to publish library code',
+                'description' => 'Description of the directory.',
+                'example' => 'Remember to publish library code.',
             ],
             'address' => [
-                'description' => 'address of directory',
-                'example' => 'Remember to publish library code',
+                'description' => 'Address of the directory.',
+                'example' => 'Cairo, Egypt',
             ],
             'phone' => [
-                'description' => 'phone of directory',
+                'description' => 'Phone number of the directory.',
+                'example' => '01150064538',
+            ],
+            'whatsapp' => [
+                'description' => 'WhatsApp number (optional).',
                 'example' => '01150064538',
             ],
             'category_ids' => [
-                'description' => 'list of categories of directory',
-                'example' => '[1,2,3]',
+                'description' => 'Array of category IDs.',
+                'example' => [1, 2, 3],
             ],
         ];
     }
