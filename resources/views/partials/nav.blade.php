@@ -44,6 +44,12 @@
                         <i class="fab fa-android"></i>
                         تطبيق الأندرويد</a>
                 </li>
+   <li class="nav-item">
+                    <a target="_blank" class="nav-link active" aria-current="page"
+                       href="https://www.facebook.com/dalil.el.mansorya">
+                        <i class="fab fa-facebook"></i>
+                         فيسبوك</a>
+                </li>
 
                 <li class="nav-item">
                     <a href="/add" class="btn btn-primary">اضافة</a>
