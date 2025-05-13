@@ -18,9 +18,9 @@ class DirectoryController extends Controller
         $this->setApiFormRequest(DirectoryRequest::class);
     }
 
-    protected function query()
+    public function getQuery()
     {
-        return parent::query()->approved();
+        return $this->apiModel::query()->where('is_approved', true);
     }
 
     /**
