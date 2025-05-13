@@ -36,6 +36,7 @@ class Directory extends ApiModel
         'linkedin',
         'telegram',
         'cv_link',
+        'is_approved',
 
     ];
 
@@ -52,5 +53,10 @@ class Directory extends ApiModel
     public function categories()
     {
         return $this->belongsToMany(Category::class);
+    }
+
+    public function scopeApproved($query)
+    {
+        return $query->where('is_approved', true);
     }
 }

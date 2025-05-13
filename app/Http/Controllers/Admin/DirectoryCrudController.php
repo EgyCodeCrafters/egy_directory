@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\DirectoryRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
+use Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+use Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+use Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+use Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+use Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 use Illuminate\Support\Str;
 
@@ -14,11 +19,11 @@ use Illuminate\Support\Str;
  */
 class DirectoryCrudController extends CrudController
 {
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use CreateOperation;
+    use DeleteOperation;
+    use ListOperation;
+    use ShowOperation;
+    use UpdateOperation;
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
@@ -46,8 +51,6 @@ class DirectoryCrudController extends CrudController
          * Columns can be defined using the fluent syntax:
          * - CRUD::column('price')->type('number');
          */
-        //        CRUD::column('country_id')->type('number');
-        //        CRUD::column('city_id')->type('number');
         CRUD::column('name');
         CRUD::column('description');
         CRUD::column('phone')->wrapper(['href' => function ($crud, $column, $entry) {
@@ -60,8 +63,6 @@ class DirectoryCrudController extends CrudController
 
             return 'https://wa.me/'.$cleanedLink;
         }]);
-        //        CRUD::column('country');
-        //        CRUD::column('city');
         CRUD::column('category');
         CRUD::column('category')->wrapper(['href' => function ($crud, $column, $entry) {
             return backpack_url("/category/$entry->category_id/show");

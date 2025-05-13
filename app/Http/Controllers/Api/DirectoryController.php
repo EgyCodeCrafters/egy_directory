@@ -18,6 +18,11 @@ class DirectoryController extends Controller
         $this->setApiFormRequest(DirectoryRequest::class);
     }
 
+    protected function query()
+    {
+        return parent::query()->approved();
+    }
+
     /**
      * Override the default store action.
      */
