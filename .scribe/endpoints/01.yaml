@@ -168,7 +168,7 @@ endpoints:
         name: fieldName
         description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
         required: false
-        example: asperiores
+        example: rerum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -177,7 +177,7 @@ endpoints:
       limit: '3'
       page: 1
       sort: latest
-      fieldName: asperiores
+      fieldName: rerum
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -402,13 +402,13 @@ endpoints:
         name: id
         description: 'The id of the resource to view'
         required: true
-        example: 7
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 7
+      id: 6
     queryParameters:
       count:
         name: count
@@ -484,13 +484,13 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: 6
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 6
+      id: 20
     queryParameters:
       count:
         name: count
@@ -574,13 +574,13 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: 7
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 7
+      id: 19
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -744,7 +744,7 @@ endpoints:
         name: fieldName
         description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
         required: false
-        example: laboriosam
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -753,7 +753,7 @@ endpoints:
       limit: '3'
       page: 1
       sort: latest
-      fieldName: laboriosam
+      fieldName: et
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -1916,63 +1916,83 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Create Resource'
-      description: |-
-        Create a new record of this resource in the database. You can return related data or counts of related data
-        in the response using the `count` and `contain` query params
-      authenticated: true
+      title: 'Override the default store action.'
+      description: ''
+      authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters:
-      count:
-        name: count
-        description: 'Count related models. Alternatively `with_count` e.g. `?count=relation1,relation2`.'
-        required: false
-        example: null
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        custom: []
-      contain:
-        name: contain
-        description: 'Contain data from related model e.g. `?contain=relation1,relation2`.'
-        required: false
-        example: null
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Name of the directory. Must not be greater than 255 characters.'
+        required: true
+        example: 'Publish Library'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+      phone:
+        name: phone
+        description: 'Phone number of the directory.'
+        required: true
+        example: '01150064538'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      whatsapp:
+        name: whatsapp
+        description: 'WhatsApp number (optional).'
+        required: false
+        example: '01150064538'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      description:
+        name: description
+        description: 'Description of the directory.'
+        required: true
+        example: 'Remember to publish library code.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      address:
+        name: address
+        description: 'Address of the directory.'
+        required: true
+        example: 'Cairo, Egypt'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      category_ids:
+        name: category_ids
+        description: ''
+        required: false
+        example:
+          - 4
+        type: 'integer[]'
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      name: 'Publish Library'
+      phone: '01150064538'
+      whatsapp: '01150064538'
+      description: 'Remember to publish library code.'
+      address: 'Cairo, Egypt'
+      category_ids:
+        - 4
     fileParameters: []
-    responses:
-      -
-        status: 400
-        content: |-
-          {
-           "status": "error",
-           "message": [
-              "validation error message"
-           ]
-          }
-        headers: []
-        description: ''
-        custom: []
-      -
-        status: 500
-        content: |-
-          {
-           "status": "error",
-           "message": "Details of error message"
-          }
-        headers: []
-        description: ''
-        custom: []
+    responses: []
     responseFields: []
     auth: []
     controller: null
@@ -2002,13 +2022,13 @@ endpoints:
         name: id
         description: 'The id of the resource to view'
         required: true
-        example: 3
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 3
+      id: 2
     queryParameters:
       count:
         name: count
@@ -2034,6 +2054,17 @@ endpoints:
     fileParameters: []
     responses:
       -
+        status: 200
+        content: '{"data":{"id":2,"name":"Scarlet Morse","description":"Eu quibusdam minus o","phone":"01150064746","whatsapp":"01150064746","address":"Culpa ullamco qui c","google_map":"Duis voluptatem aliq","notes":"Sed nesciunt sit e","email":"dasytek@mailinator.com","facebook":"Natus id qui at porr","behance":null,"twitter":"Autem voluptatem Ip","instagram":"Consequuntur magnam","website":"https:\/\/www.jog.co","cv":null,"created_at":"2025-04-10T14:27:26.000000Z","updated_at":"2025-04-10T14:27:26.000000Z","country_id":null,"city_id":null,"category_id":null,"telegram":null,"youtube":null,"linkedIn":null}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+      -
         status: 404
         content: |-
           {
@@ -2042,17 +2073,6 @@ endpoints:
           }
         headers: []
         description: ''
-        custom: []
-      -
-        status: 404
-        content: '{"status":"failed","message":"Resource not found"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
-          access-control-allow-origin: '*'
-        description: null
         custom: []
     responseFields: []
     auth: []

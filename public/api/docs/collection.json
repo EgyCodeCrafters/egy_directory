@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Al Mansouria Directory",
-        "_postman_id": "4a2fcbc2-edfa-4bf4-9fd9-b4e7bb62b63d",
+        "_postman_id": "70bad102-37e8-4f18-acff-51a819a63d82",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -200,12 +200,12 @@
                                 },
                                 {
                                     "key": "fieldName",
-                                    "value": "asperiores",
+                                    "value": "rerum",
                                     "description": "Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/categories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=asperiores"
+                            "raw": "{{baseUrl}}\/api\/categories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=rerum"
                         },
                         "method": "GET",
                         "header": [
@@ -417,7 +417,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "7",
+                                    "value": "6",
                                     "description": "The id of the resource to view"
                                 }
                             ]
@@ -497,7 +497,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "6",
+                                    "value": "20",
                                     "description": "The ID of the category."
                                 }
                             ]
@@ -549,7 +549,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "7",
+                                    "value": "19",
                                     "description": "The ID of the category."
                                 }
                             ]
@@ -682,12 +682,12 @@
                                 },
                                 {
                                     "key": "fieldName",
-                                    "value": "laboriosam",
+                                    "value": "et",
                                     "description": "Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/directories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=laboriosam"
+                            "raw": "{{baseUrl}}\/api\/directories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=et"
                         },
                         "method": "GET",
                         "header": [
@@ -824,26 +824,13 @@
                     ]
                 },
                 {
-                    "name": "Create Resource",
+                    "name": "Override the default store action.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
                             "path": "api\/directories",
-                            "query": [
-                                {
-                                    "key": "count",
-                                    "value": "",
-                                    "description": "Count related models. Alternatively `with_count` e.g. `?count=relation1,relation2`.",
-                                    "disabled": true
-                                },
-                                {
-                                    "key": "contain",
-                                    "value": "",
-                                    "description": "Contain data from related model e.g. `?contain=relation1,relation2`.",
-                                    "disabled": true
-                                }
-                            ],
-                            "raw": "{{baseUrl}}\/api\/directories?count=&contain="
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/directories"
                         },
                         "method": "POST",
                         "header": [
@@ -856,23 +843,16 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
-                        "description": "Create a new record of this resource in the database. You can return related data or counts of related data\nin the response using the `count` and `contain` query params"
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 400,
-                            "body": "{\n \"status\": \"error\",\n \"message\": [\n    \"validation error message\"\n ]\n}",
-                            "name": ""
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"Publish Library\",\"phone\":\"01150064538\",\"whatsapp\":\"01150064538\",\"description\":\"Remember to publish library code.\",\"address\":\"Cairo, Egypt\",\"category_ids\":[4]}"
                         },
-                        {
-                            "header": [],
-                            "code": 500,
-                            "body": "{\n \"status\": \"error\",\n \"message\": \"Details of error message\"\n}",
-                            "name": ""
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
                         }
-                    ]
+                    },
+                    "response": []
                 },
                 {
                     "name": "View Resource",
@@ -899,7 +879,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "3",
+                                    "value": "2",
                                     "description": "The id of the resource to view"
                                 }
                             ]
@@ -919,12 +899,6 @@
                         "description": "Returns information about a specific record in this resource. You can return related data or counts of related data\nin the response using the `count` and `contain` query params"
                     },
                     "response": [
-                        {
-                            "header": [],
-                            "code": 404,
-                            "body": "{\n \"status\": \"failed\",\n \"message\": \"Resource not found\"\n}",
-                            "name": ""
-                        },
                         {
                             "header": [
                                 {
@@ -948,8 +922,14 @@
                                     "value": "*"
                                 }
                             ],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":2,\"name\":\"Scarlet Morse\",\"description\":\"Eu quibusdam minus o\",\"phone\":\"01150064746\",\"whatsapp\":\"01150064746\",\"address\":\"Culpa ullamco qui c\",\"google_map\":\"Duis voluptatem aliq\",\"notes\":\"Sed nesciunt sit e\",\"email\":\"dasytek@mailinator.com\",\"facebook\":\"Natus id qui at porr\",\"behance\":null,\"twitter\":\"Autem voluptatem Ip\",\"instagram\":\"Consequuntur magnam\",\"website\":\"https:\\\/\\\/www.jog.co\",\"cv\":null,\"created_at\":\"2025-04-10T14:27:26.000000Z\",\"updated_at\":\"2025-04-10T14:27:26.000000Z\",\"country_id\":null,\"city_id\":null,\"category_id\":null,\"telegram\":null,\"youtube\":null,\"linkedIn\":null}}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
                             "code": 404,
-                            "body": "{\"status\":\"failed\",\"message\":\"Resource not found\"}",
+                            "body": "{\n \"status\": \"failed\",\n \"message\": \"Resource not found\"\n}",
                             "name": ""
                         }
                     ]

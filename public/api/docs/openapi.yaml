@@ -130,12 +130,12 @@ paths:
           in: query
           name: fieldName
           description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
-          example: asperiores
+          example: rerum
           required: false
           schema:
             type: string
             description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
-            example: asperiores
+            example: rerum
       responses:
         200:
           description: ''
@@ -658,7 +658,7 @@ paths:
         in: path
         name: id
         description: 'The id of the resource to view'
-        example: 7
+        example: 6
         required: true
         schema:
           type: integer
@@ -753,12 +753,12 @@ paths:
           in: query
           name: fieldName
           description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
-          example: laboriosam
+          example: et
           required: false
           schema:
             type: string
             description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
-            example: laboriosam
+            example: et
       responses:
         500:
           description: ''
@@ -2652,69 +2652,53 @@ paths:
       tags:
         - Endpoints
     post:
-      summary: 'Create Resource'
-      operationId: createResource
-      description: "Create a new record of this resource in the database. You can return related data or counts of related data\nin the response using the `count` and `contain` query params"
-      parameters:
-        -
-          in: query
-          name: count
-          description: 'Count related models. Alternatively `with_count` e.g. `?count=relation1,relation2`.'
-          example: null
-          required: false
-          schema:
-            type: integer
-            description: 'Count related models. Alternatively `with_count` e.g. `?count=relation1,relation2`.'
-            example: null
-        -
-          in: query
-          name: contain
-          description: 'Contain data from related model e.g. `?contain=relation1,relation2`.'
-          example: null
-          required: false
-          schema:
-            type: string
-            description: 'Contain data from related model e.g. `?contain=relation1,relation2`.'
-            example: null
-      responses:
-        400:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  status: error
-                  message:
-                    - 'validation error message'
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: array
-                    example:
-                      - 'validation error message'
-                    items:
-                      type: string
-        500:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  status: error
-                  message: 'Details of error message'
-                properties:
-                  status:
-                    type: string
-                    example: error
-                  message:
-                    type: string
-                    example: 'Details of error message'
+      summary: 'Override the default store action.'
+      operationId: overrideTheDefaultStoreAction
+      description: ''
+      parameters: []
+      responses: {  }
       tags:
         - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Name of the directory. Must not be greater than 255 characters.'
+                  example: 'Publish Library'
+                phone:
+                  type: string
+                  description: 'Phone number of the directory.'
+                  example: '01150064538'
+                whatsapp:
+                  type: string
+                  description: 'WhatsApp number (optional).'
+                  example: '01150064538'
+                description:
+                  type: string
+                  description: 'Description of the directory.'
+                  example: 'Remember to publish library code.'
+                address:
+                  type: string
+                  description: 'Address of the directory.'
+                  example: 'Cairo, Egypt'
+                category_ids:
+                  type: array
+                  description: ''
+                  example:
+                    - 4
+                  items:
+                    type: integer
+              required:
+                - name
+                - phone
+                - description
+                - address
+      security: []
   '/api/directories/{id}':
     get:
       summary: 'View Resource'
@@ -2742,6 +2726,110 @@ paths:
             description: 'Contain data from related model e.g. `?contain=relation1,relation2`.'
             example: null
       responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 2
+                    name: 'Scarlet Morse'
+                    description: 'Eu quibusdam minus o'
+                    phone: '01150064746'
+                    whatsapp: '01150064746'
+                    address: 'Culpa ullamco qui c'
+                    google_map: 'Duis voluptatem aliq'
+                    notes: 'Sed nesciunt sit e'
+                    email: dasytek@mailinator.com
+                    facebook: 'Natus id qui at porr'
+                    behance: null
+                    twitter: 'Autem voluptatem Ip'
+                    instagram: 'Consequuntur magnam'
+                    website: 'https://www.jog.co'
+                    cv: null
+                    created_at: '2025-04-10T14:27:26.000000Z'
+                    updated_at: '2025-04-10T14:27:26.000000Z'
+                    country_id: null
+                    city_id: null
+                    category_id: null
+                    telegram: null
+                    youtube: null
+                    linkedIn: null
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 2
+                      name:
+                        type: string
+                        example: 'Scarlet Morse'
+                      description:
+                        type: string
+                        example: 'Eu quibusdam minus o'
+                      phone:
+                        type: string
+                        example: '01150064746'
+                      whatsapp:
+                        type: string
+                        example: '01150064746'
+                      address:
+                        type: string
+                        example: 'Culpa ullamco qui c'
+                      google_map:
+                        type: string
+                        example: 'Duis voluptatem aliq'
+                      notes:
+                        type: string
+                        example: 'Sed nesciunt sit e'
+                      email:
+                        type: string
+                        example: dasytek@mailinator.com
+                      facebook:
+                        type: string
+                        example: 'Natus id qui at porr'
+                      behance:
+                        type: string
+                        example: null
+                      twitter:
+                        type: string
+                        example: 'Autem voluptatem Ip'
+                      instagram:
+                        type: string
+                        example: 'Consequuntur magnam'
+                      website:
+                        type: string
+                        example: 'https://www.jog.co'
+                      cv:
+                        type: string
+                        example: null
+                      created_at:
+                        type: string
+                        example: '2025-04-10T14:27:26.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2025-04-10T14:27:26.000000Z'
+                      country_id:
+                        type: string
+                        example: null
+                      city_id:
+                        type: string
+                        example: null
+                      category_id:
+                        type: string
+                        example: null
+                      telegram:
+                        type: string
+                        example: null
+                      youtube:
+                        type: string
+                        example: null
+                      linkedIn:
+                        type: string
+                        example: null
         404:
           description: ''
           content:
@@ -2893,7 +2981,7 @@ paths:
         in: path
         name: id
         description: 'The id of the resource to view'
-        example: 3
+        example: 2
         required: true
         schema:
           type: integer
