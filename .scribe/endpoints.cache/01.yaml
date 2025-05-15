@@ -170,7 +170,7 @@ endpoints:
         name: fieldName
         description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
         required: false
-        example: rerum
+        example: cupiditate
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -179,7 +179,7 @@ endpoints:
       limit: '3'
       page: 1
       sort: latest
-      fieldName: rerum
+      fieldName: cupiditate
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -404,13 +404,13 @@ endpoints:
         name: id
         description: 'The id of the resource to view'
         required: true
-        example: 6
+        example: 18
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 6
+      id: 18
     queryParameters:
       count:
         name: count
@@ -486,13 +486,13 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: 20
+        example: 19
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 20
+      id: 19
     queryParameters:
       count:
         name: count
@@ -576,13 +576,13 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: 19
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 19
+      id: 20
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -746,7 +746,7 @@ endpoints:
         name: fieldName
         description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
         required: false
-        example: et
+        example: recusandae
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -755,7 +755,7 @@ endpoints:
       limit: '3'
       page: 1
       sort: latest
-      fieldName: et
+      fieldName: recusandae
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -1980,7 +1980,7 @@ endpoints:
         description: ''
         required: false
         example:
-          - 4
+          - 6
         type: 'integer[]'
         enumValues: []
         exampleWasSpecified: false
@@ -1992,7 +1992,7 @@ endpoints:
       description: 'Remember to publish library code.'
       address: 'Cairo, Egypt'
       category_ids:
-        - 4
+        - 6
     fileParameters: []
     responses: []
     responseFields: []
@@ -2024,13 +2024,13 @@ endpoints:
         name: id
         description: 'The id of the resource to view'
         required: true
-        example: 2
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 2
+      id: 3
     queryParameters:
       count:
         name: count
@@ -2056,17 +2056,6 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"data":{"id":2,"name":"Scarlet Morse","description":"Eu quibusdam minus o","phone":"01150064746","whatsapp":"01150064746","address":"Culpa ullamco qui c","google_map":"Duis voluptatem aliq","notes":"Sed nesciunt sit e","email":"dasytek@mailinator.com","facebook":"Natus id qui at porr","behance":null,"twitter":"Autem voluptatem Ip","instagram":"Consequuntur magnam","website":"https:\/\/www.jog.co","cv":null,"created_at":"2025-04-10T14:27:26.000000Z","updated_at":"2025-04-10T14:27:26.000000Z","country_id":null,"city_id":null,"category_id":null,"telegram":null,"youtube":null,"linkedIn":null}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-      -
         status: 404
         content: |-
           {
@@ -2075,6 +2064,17 @@ endpoints:
           }
         headers: []
         description: ''
+        custom: []
+      -
+        status: 404
+        content: '{"status":"failed","message":"Resource not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: '*'
+        description: null
         custom: []
     responseFields: []
     auth: []

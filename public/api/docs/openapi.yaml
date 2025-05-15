@@ -130,12 +130,12 @@ paths:
           in: query
           name: fieldName
           description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
-          example: rerum
+          example: cupiditate
           required: false
           schema:
             type: string
             description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
-            example: rerum
+            example: cupiditate
       responses:
         200:
           description: ''
@@ -658,7 +658,7 @@ paths:
         in: path
         name: id
         description: 'The id of the resource to view'
-        example: 6
+        example: 18
         required: true
         schema:
           type: integer
@@ -753,12 +753,12 @@ paths:
           in: query
           name: fieldName
           description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
-          example: et
+          example: recusandae
           required: false
           schema:
             type: string
             description: 'Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field'
-            example: et
+            example: recusandae
       responses:
         500:
           description: ''
@@ -2690,7 +2690,7 @@ paths:
                   type: array
                   description: ''
                   example:
-                    - 4
+                    - 6
                   items:
                     type: integer
               required:
@@ -2726,110 +2726,6 @@ paths:
             description: 'Contain data from related model e.g. `?contain=relation1,relation2`.'
             example: null
       responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  data:
-                    id: 2
-                    name: 'Scarlet Morse'
-                    description: 'Eu quibusdam minus o'
-                    phone: '01150064746'
-                    whatsapp: '01150064746'
-                    address: 'Culpa ullamco qui c'
-                    google_map: 'Duis voluptatem aliq'
-                    notes: 'Sed nesciunt sit e'
-                    email: dasytek@mailinator.com
-                    facebook: 'Natus id qui at porr'
-                    behance: null
-                    twitter: 'Autem voluptatem Ip'
-                    instagram: 'Consequuntur magnam'
-                    website: 'https://www.jog.co'
-                    cv: null
-                    created_at: '2025-04-10T14:27:26.000000Z'
-                    updated_at: '2025-04-10T14:27:26.000000Z'
-                    country_id: null
-                    city_id: null
-                    category_id: null
-                    telegram: null
-                    youtube: null
-                    linkedIn: null
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                        example: 2
-                      name:
-                        type: string
-                        example: 'Scarlet Morse'
-                      description:
-                        type: string
-                        example: 'Eu quibusdam minus o'
-                      phone:
-                        type: string
-                        example: '01150064746'
-                      whatsapp:
-                        type: string
-                        example: '01150064746'
-                      address:
-                        type: string
-                        example: 'Culpa ullamco qui c'
-                      google_map:
-                        type: string
-                        example: 'Duis voluptatem aliq'
-                      notes:
-                        type: string
-                        example: 'Sed nesciunt sit e'
-                      email:
-                        type: string
-                        example: dasytek@mailinator.com
-                      facebook:
-                        type: string
-                        example: 'Natus id qui at porr'
-                      behance:
-                        type: string
-                        example: null
-                      twitter:
-                        type: string
-                        example: 'Autem voluptatem Ip'
-                      instagram:
-                        type: string
-                        example: 'Consequuntur magnam'
-                      website:
-                        type: string
-                        example: 'https://www.jog.co'
-                      cv:
-                        type: string
-                        example: null
-                      created_at:
-                        type: string
-                        example: '2025-04-10T14:27:26.000000Z'
-                      updated_at:
-                        type: string
-                        example: '2025-04-10T14:27:26.000000Z'
-                      country_id:
-                        type: string
-                        example: null
-                      city_id:
-                        type: string
-                        example: null
-                      category_id:
-                        type: string
-                        example: null
-                      telegram:
-                        type: string
-                        example: null
-                      youtube:
-                        type: string
-                        example: null
-                      linkedIn:
-                        type: string
-                        example: null
         404:
           description: ''
           content:
@@ -2981,7 +2877,7 @@ paths:
         in: path
         name: id
         description: 'The id of the resource to view'
-        example: 2
+        example: 3
         required: true
         schema:
           type: integer

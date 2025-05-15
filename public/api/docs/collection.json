@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Al Mansouria Directory",
-        "_postman_id": "70bad102-37e8-4f18-acff-51a819a63d82",
+        "_postman_id": "42d95922-4626-40f4-b0b3-65d94cfbe72f",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -200,12 +200,12 @@
                                 },
                                 {
                                     "key": "fieldName",
-                                    "value": "rerum",
+                                    "value": "cupiditate",
                                     "description": "Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/categories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=rerum"
+                            "raw": "{{baseUrl}}\/api\/categories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=cupiditate"
                         },
                         "method": "GET",
                         "header": [
@@ -417,7 +417,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "6",
+                                    "value": "18",
                                     "description": "The id of the resource to view"
                                 }
                             ]
@@ -497,7 +497,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "20",
+                                    "value": "19",
                                     "description": "The ID of the category."
                                 }
                             ]
@@ -549,7 +549,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "19",
+                                    "value": "20",
                                     "description": "The ID of the category."
                                 }
                             ]
@@ -682,12 +682,12 @@
                                 },
                                 {
                                     "key": "fieldName",
-                                    "value": "et",
+                                    "value": "recusandae",
                                     "description": "Pass any field and value to search by e.g. `name=John&email=any@aol.com`. Search logic may use LIKE or `=` depending on field",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/directories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=et"
+                            "raw": "{{baseUrl}}\/api\/directories\/search?limit=3&page=1&sort=latest&count=&contain=&fieldName=recusandae"
                         },
                         "method": "GET",
                         "header": [
@@ -845,7 +845,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"Publish Library\",\"phone\":\"01150064538\",\"whatsapp\":\"01150064538\",\"description\":\"Remember to publish library code.\",\"address\":\"Cairo, Egypt\",\"category_ids\":[4]}"
+                            "raw": "{\"name\":\"Publish Library\",\"phone\":\"01150064538\",\"whatsapp\":\"01150064538\",\"description\":\"Remember to publish library code.\",\"address\":\"Cairo, Egypt\",\"category_ids\":[6]}"
                         },
                         "description": "",
                         "auth": {
@@ -879,7 +879,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "2",
+                                    "value": "3",
                                     "description": "The id of the resource to view"
                                 }
                             ]
@@ -899,6 +899,12 @@
                         "description": "Returns information about a specific record in this resource. You can return related data or counts of related data\nin the response using the `count` and `contain` query params"
                     },
                     "response": [
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n \"status\": \"failed\",\n \"message\": \"Resource not found\"\n}",
+                            "name": ""
+                        },
                         {
                             "header": [
                                 {
@@ -922,14 +928,8 @@
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "{\"data\":{\"id\":2,\"name\":\"Scarlet Morse\",\"description\":\"Eu quibusdam minus o\",\"phone\":\"01150064746\",\"whatsapp\":\"01150064746\",\"address\":\"Culpa ullamco qui c\",\"google_map\":\"Duis voluptatem aliq\",\"notes\":\"Sed nesciunt sit e\",\"email\":\"dasytek@mailinator.com\",\"facebook\":\"Natus id qui at porr\",\"behance\":null,\"twitter\":\"Autem voluptatem Ip\",\"instagram\":\"Consequuntur magnam\",\"website\":\"https:\\\/\\\/www.jog.co\",\"cv\":null,\"created_at\":\"2025-04-10T14:27:26.000000Z\",\"updated_at\":\"2025-04-10T14:27:26.000000Z\",\"country_id\":null,\"city_id\":null,\"category_id\":null,\"telegram\":null,\"youtube\":null,\"linkedIn\":null}}",
-                            "name": ""
-                        },
-                        {
-                            "header": [],
                             "code": 404,
-                            "body": "{\n \"status\": \"failed\",\n \"message\": \"Resource not found\"\n}",
+                            "body": "{\"status\":\"failed\",\"message\":\"Resource not found\"}",
                             "name": ""
                         }
                     ]

@@ -137,7 +137,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: May 13, 2025</li>
+        <li>Last updated: May 15, 2025</li>
     </ul>
 </div>
 
@@ -558,7 +558,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://directory.egycodecrafters.com/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=rerum" \
+    --get "https://directory.egycodecrafters.com/api/categories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=cupiditate" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -572,7 +572,7 @@ const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "rerum",
+    "fieldName": "cupiditate",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -772,10 +772,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-categories-search"
-               value="rerum"
+               value="cupiditate"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>rerum</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>cupiditate</code></p>
             </div>
                 </form>
 
@@ -1193,14 +1193,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://directory.egycodecrafters.com/api/categories/6" \
+    --get "https://directory.egycodecrafters.com/api/categories/18" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://directory.egycodecrafters.com/api/categories/6"
+    "https://directory.egycodecrafters.com/api/categories/18"
 );
 
 const headers = {
@@ -1322,10 +1322,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-categories--id-"
-               value="6"
+               value="18"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>6</code></p>
+<p>The id of the resource to view Example: <code>18</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -1367,14 +1367,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "https://directory.egycodecrafters.com/api/categories/20" \
+    "https://directory.egycodecrafters.com/api/categories/19" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://directory.egycodecrafters.com/api/categories/20"
+    "https://directory.egycodecrafters.com/api/categories/19"
 );
 
 const headers = {
@@ -1503,10 +1503,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-categories--id-"
-               value="20"
+               value="19"
                data-component="url">
     <br>
-<p>The ID of the category. Example: <code>20</code></p>
+<p>The ID of the category. Example: <code>19</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -1547,14 +1547,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://directory.egycodecrafters.com/api/categories/19" \
+    "https://directory.egycodecrafters.com/api/categories/20" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://directory.egycodecrafters.com/api/categories/19"
+    "https://directory.egycodecrafters.com/api/categories/20"
 );
 
 const headers = {
@@ -1670,10 +1670,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-categories--id-"
-               value="19"
+               value="20"
                data-component="url">
     <br>
-<p>The ID of the category. Example: <code>19</code></p>
+<p>The ID of the category. Example: <code>20</code></p>
             </div>
                     </form>
 
@@ -1840,7 +1840,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://directory.egycodecrafters.com/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=et" \
+    --get "https://directory.egycodecrafters.com/api/directories/search?limit=3&amp;page=1&amp;sort=latest&amp;fieldName=recusandae" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1854,7 +1854,7 @@ const params = {
     "limit": "3",
     "page": "1",
     "sort": "latest",
-    "fieldName": "et",
+    "fieldName": "recusandae",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -2531,10 +2531,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="fieldName"                data-endpoint="GETapi-directories-search"
-               value="et"
+               value="recusandae"
                data-component="query">
     <br>
-<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>et</code></p>
+<p>Pass any field and value to search by e.g. <code>name=John&amp;email=any@aol.com</code>. Search logic may use LIKE or <code>=</code> depending on field Example: <code>recusandae</code></p>
             </div>
                 </form>
 
@@ -3282,7 +3282,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"description\": \"Remember to publish library code.\",
     \"address\": \"Cairo, Egypt\",
     \"category_ids\": [
-        4
+        6
     ]
 }"
 </code></pre></div>
@@ -3305,7 +3305,7 @@ let body = {
     "description": "Remember to publish library code.",
     "address": "Cairo, Egypt",
     "category_ids": [
-        4
+        6
     ]
 };
 
@@ -3474,14 +3474,14 @@ in the response using the <code>count</code> and <code>contain</code> query para
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://directory.egycodecrafters.com/api/directories/2" \
+    --get "https://directory.egycodecrafters.com/api/directories/3" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://directory.egycodecrafters.com/api/directories/2"
+    "https://directory.egycodecrafters.com/api/directories/3"
 );
 
 const headers = {
@@ -3498,7 +3498,17 @@ fetch(url, {
 
 <span id="example-responses-GETapi-directories--id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (404):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;status&quot;: &quot;failed&quot;,
+    &quot;message&quot;: &quot;Resource not found&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -3510,39 +3520,6 @@ x-ratelimit-limit: 60
 x-ratelimit-remaining: 52
 access-control-allow-origin: *
  </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: {
-        &quot;id&quot;: 2,
-        &quot;name&quot;: &quot;Scarlet Morse&quot;,
-        &quot;description&quot;: &quot;Eu quibusdam minus o&quot;,
-        &quot;phone&quot;: &quot;01150064746&quot;,
-        &quot;whatsapp&quot;: &quot;01150064746&quot;,
-        &quot;address&quot;: &quot;Culpa ullamco qui c&quot;,
-        &quot;google_map&quot;: &quot;Duis voluptatem aliq&quot;,
-        &quot;notes&quot;: &quot;Sed nesciunt sit e&quot;,
-        &quot;email&quot;: &quot;dasytek@mailinator.com&quot;,
-        &quot;facebook&quot;: &quot;Natus id qui at porr&quot;,
-        &quot;behance&quot;: null,
-        &quot;twitter&quot;: &quot;Autem voluptatem Ip&quot;,
-        &quot;instagram&quot;: &quot;Consequuntur magnam&quot;,
-        &quot;website&quot;: &quot;https://www.jog.co&quot;,
-        &quot;cv&quot;: null,
-        &quot;created_at&quot;: &quot;2025-04-10T14:27:26.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-10T14:27:26.000000Z&quot;,
-        &quot;country_id&quot;: null,
-        &quot;city_id&quot;: null,
-        &quot;category_id&quot;: null,
-        &quot;telegram&quot;: null,
-        &quot;youtube&quot;: null,
-        &quot;linkedIn&quot;: null
-    }
-}</code>
- </pre>
-            <blockquote>
-            <p>Example response (404):</p>
-        </blockquote>
-                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;status&quot;: &quot;failed&quot;,
@@ -3626,10 +3603,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-directories--id-"
-               value="2"
+               value="3"
                data-component="url">
     <br>
-<p>The id of the resource to view Example: <code>2</code></p>
+<p>The id of the resource to view Example: <code>3</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
