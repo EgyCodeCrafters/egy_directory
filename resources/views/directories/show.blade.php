@@ -96,7 +96,7 @@
         @endif
         </ul>
         @foreach($directory->categories as $category)
-            <span class="badge alert-dark">
+            <span class="badge">
                     <a href="{{url("category/$category->id")}}">{{$category->name}}</a>
                 </span>
         @endforeach
