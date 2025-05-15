@@ -37,6 +37,15 @@
                 @endif
 
 
+                    @if(filter_var($directory->behance, FILTER_VALIDATE_URL))
+                        <li>
+                            <a target="_blank"
+                               href="{{$directory->behance}}">Behance
+                                <i class="fab fa-behance"></i>
+                            </a>
+                        </li>
+                    @endif
+
                 @if(!empty($directory->google_map))
                     <li>
                         <a target="_blank"
