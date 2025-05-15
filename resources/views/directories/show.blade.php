@@ -36,7 +36,7 @@
         @if(filter_var($directory->facebook, FILTER_VALIDATE_URL))
             <li>
                 <a target="_blank"
-                   href="{{$directory->facebook}}">فيسبوك
+                   href="{{$directory->facebook}}">{{$directory->facebook}}
                     <i class="fab fa-facebook"></i>
                 </a>
             </li>
@@ -46,7 +46,7 @@
         @if(filter_var($directory->behance, FILTER_VALIDATE_URL))
             <li>
                 <a target="_blank"
-                   href="{{$directory->behance}}">Behance
+                   href="{{$directory->behance}}">{{$directory->behance}}
                     <i class="fab fa-behance"></i>
                 </a>
             </li>
@@ -55,7 +55,7 @@
         @if(!empty($directory->google_map))
             <li>
                 <a target="_blank"
-                   href="{{$directory->google_map}}"> الموقع على الخريطة
+                   href="{{$directory->google_map}}">   {{$directory->google_map}}
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                 </a>
 
@@ -66,7 +66,7 @@
         @if(!empty($directory->website))
             <li>
                 <a target="_blank"
-                   href="{{$directory->website}}"> الموقع الالكتروني
+                   href="{{$directory->website}}">  {{$directory->website}}
                     <i class="fa fa-globe" aria-hidden="true"></i>
                 </a>
 
@@ -76,7 +76,7 @@
         @if(!empty($directory->telegram))
             <li>
                 <a target="_blank"
-                   href="{{$directory->telegram}}">تليجرام
+                   href="{{$directory->telegram}}">{{$directory->telegram}}
                     <i class="fab fa-telegram" aria-hidden="true"></i>
                 </a>
 
@@ -88,7 +88,7 @@
         @if(!empty($directory->youtube))
             <li>
                 <a target="_blank"
-                   href="{{$directory->youtube}}"> يوتيوب
+                   href="{{$directory->youtube}}"> {{$directory->youtube}}
                     <i class="fab fa-youtube" aria-hidden="true"></i>
                 </a>
 
