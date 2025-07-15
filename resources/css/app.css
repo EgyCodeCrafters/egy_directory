@@ -1,0 +1,41 @@
+body {
+    font-size: larger;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.card {
+    transition: background-color 0.3s ease;
+    /* Transition property for a smooth color change */
+}
+
+.card a {
+    color: #333;
+}
+
+.card .alert-dark a {
+    color: #eee;
+}
+
+.card-title {
+    font-size: inherit !important;
+}
+
+.jumbotron {
+
+    margin: 2em 0;
+
+}
+
+.a2a_kit {
+    text-align: left;
+    font-size: smaller;
+}
+
+#mobile_app {
+    width: 200px !important;
+}
