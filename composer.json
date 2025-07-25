@@ -14,7 +14,8 @@
         "kyslik/column-sortable": "^6.5",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
-        "laravel/tinker": "^2.8"
+        "laravel/tinker": "^2.8",
+        "spatie/laravel-tail": "^4.5"
     },
     "require-dev": {
         "backpack/generators": "^4.0",
