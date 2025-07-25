@@ -9,6 +9,7 @@
         "backpack/crud": "^6.4",
         "backpack/theme-tabler": "^1.1",
         "fadugyamfi/laravel-api-base": "^0.9.7",
+        "filament/filament": "^3.3",
         "guzzlehttp/guzzle": "^7.2",
         "kyslik/column-sortable": "^6.5",
         "laravel/framework": "^10.10",
@@ -41,7 +42,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -52,7 +54,9 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "post-install-cmd": ["php artisan storage:link --quiet"]
+        "post-install-cmd": [
+            "php artisan storage:link --quiet"
+        ]
     },
     "extra": {
         "laravel": {
