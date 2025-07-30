@@ -15,7 +15,7 @@
                             <h5 class="card-title"> {{ $directory->name }}</h5>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">{{ \Illuminate\Support\Str::limit($directory->description, 250) }}</p>
+                            <p class="card-text">{{ $directory->description }}</p>
                         </div>
                     </a>
                 </div>
