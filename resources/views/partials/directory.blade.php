@@ -85,10 +85,20 @@
                 @endif
             </ul>
             @foreach ($directory->categories as $category)
-                <span class="badge alert-dark">
-                    <a href="{{ url("category/$category->id") }}">{{ $category->name }}</a>
-                </span>
+                <div class="mb-2">
+                    <span class="badge alert-dark">
+                        <a href="{{ url("category/$category->id") }}">{{ $category->name }}</a>
+                    </span>
+
+                    {{-- Show only subcategories related to this directory AND this category --}}
+                    @foreach ($directory->subCategories->where('category_id', $category->id) as $subcategory)
+                        <span class="badge alert-secondary ms-1">
+                            <a href="{{ url("sub-category/$subcategory->id") }}">{{ $subcategory->name }}</a>
+                        </span>
+                    @endforeach
+                </div>
             @endforeach
+
 
         </div>
     </div>
