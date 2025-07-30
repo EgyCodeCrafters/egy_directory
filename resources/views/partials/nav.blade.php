@@ -21,7 +21,7 @@
                         @foreach ($categories as $category)
                             @if ($category->subcategories->count())
                                 <li class="dropdown-submenu position-relative">
-                                    <a class="dropdown-item dropdown-toggle" href="#">
+                                    <a class="dropdown-item dropdown-toggle" href="{{ url("category/$category->id") }}">
                                         {{ $category->name }}
                                     </a>
                                     <ul class="dropdown-menu">
