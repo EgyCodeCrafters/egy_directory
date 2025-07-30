@@ -39,3 +39,22 @@ a {
 #mobile_app {
     width: 200px !important;
 }
+
+.dropdown-submenu {
+    position: relative;
+}
+
+/* Open submenu to the left in RTL */
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    right: 100%;
+    /* instead of left */
+    left: auto;
+    margin-top: -0.5rem;
+    display: none;
+}
+
+/* Show submenu on hover */
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}

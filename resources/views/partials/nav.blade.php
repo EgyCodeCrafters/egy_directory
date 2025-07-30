@@ -14,20 +14,38 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         التصنيفات
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @foreach ($categories as $category)
-                            <a class="dropdown-item" href="{{ url("category/$category->id") }}">
-                                {{ $category->name }}
-
-                            </a>
+                            @if ($category->subcategories->count())
+                                <li class="dropdown-submenu position-relative">
+                                    <a class="dropdown-item dropdown-toggle" href="#">
+                                        {{ $category->name }}
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        @foreach ($category->subcategories as $subcategory)
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ url("sub-category/$subcategory->id") }}">
+                                                    {{ $subcategory->name }}
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @else
+                                <li>
+                                    <a class="dropdown-item" href="{{ url("category/$category->id") }}">
+                                        {{ $category->name }}
+                                    </a>
+                                </li>
+                            @endif
                         @endforeach
-
-                    </div>
+                    </ul>
                 </li>
+
                 <li class="nav-item">
                     <a target="_blank" class="nav-link active" aria-current="page"
                         href="https://chat.whatsapp.com/IlsC7PnPgXR5dqQbKTIXv5">
