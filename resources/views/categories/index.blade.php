@@ -29,7 +29,7 @@
                                 </h5>
                             </div>
                             <div class="card-body">
-                                <p class="card-text">{{ $category->description }}</p>
+                                <p class="card-text">{{ \Illuminate\Support\Str::limit($category->description, 250) }}</p>
                             </div>
                         </a>
                     </div>
