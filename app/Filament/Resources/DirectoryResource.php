@@ -41,6 +41,13 @@ class DirectoryResource extends Resource
     ->multiple()
     ->preload(),
 
+    Select::make('subCategories')
+    ->label('Sub Categories')
+    ->relationship('subCategories', 'name')
+    ->multiple()
+    ->searchable()
+    ->preload(),
+    
 
                 // Select::make('country_id')
                 //     ->relationship('country', 'name')

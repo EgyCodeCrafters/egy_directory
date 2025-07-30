@@ -26,6 +26,12 @@ class Category extends ApiModel
         'description',
     ];
 
+    public function subCategories()
+    {
+        return $this->hasMany(SubCategory::class);
+    }
+
+
     public function directories()
     {
         return $this->belongsToMany(Directory::class);

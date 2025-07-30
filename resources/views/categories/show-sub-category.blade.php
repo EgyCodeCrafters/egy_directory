@@ -3,25 +3,13 @@
 @extends('layouts.app')
 
 @section('content')
+    <a class="dropdown-item" href="{{ url('category/' . $category->category->id) }}">
+        {{ $category->category->name }}
+    </a>
+
+
     <div class="jumbotron">
         <h1 class="display-6">{{ $category->name }} </h1>
-        @foreach ($category->subCategories as $subCategory)
-            <div class="">
-                <div class="  ">
-                    <a href="{{ url('sub-category', $subCategory->id) }}">
-                        <div class="header">
-                            <h5 class="title">
-                                {{ $subCategory->name }}
-                            </h5>
-                        </div>
-                        <div class="body">
-                            <p class="card-text">{{ $subCategory->description }}</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        @endforeach
-
         <hr class="my-4">
     </div>
 

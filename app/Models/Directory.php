@@ -55,6 +55,11 @@ class Directory extends ApiModel
         return $this->belongsToMany(Category::class);
     }
 
+    public function subCategories()
+{
+    return $this->belongsToMany(SubCategory::class);
+}
+
     public function scopeApproved($query)
     {
         return $query->where('is_approved', true);

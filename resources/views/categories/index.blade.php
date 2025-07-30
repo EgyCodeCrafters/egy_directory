@@ -26,7 +26,6 @@
                             <div class="card-header">
                                 <h5 class="card-title">
                                     {{ $category->name }}
-                                    <span class="badge alert-dark">{{ count($category->directories) }}</span>
                                 </h5>
                             </div>
                             <div class="card-body">
@@ -51,7 +50,7 @@
                             <i class="fab fa-google-play"></i> تحميل من Google Play
                         </div>
 
-                 
+
                     </a>
 
                 </div>
