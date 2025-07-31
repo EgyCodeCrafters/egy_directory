@@ -5,25 +5,21 @@
 @section('content')
     <div class="jumbotron">
         <h1 class="display-6">{{ $category->name }} </h1>
-        @foreach ($category->subCategories as $subCategory)
-            <div class="">
-                <div class="  ">
-                    <a href="{{ url('sub-category', $subCategory->id) }}">
-                        <div class="header">
-                            <h5 class="title">
-                                {{ $subCategory->name }}
-                            </h5>
-                        </div>
-                        <div class="body">
-                            <p class="card-text">{{ $subCategory->description }}</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        @endforeach
 
-        <hr class="my-4">
+
     </div>
+
+
+    <div class="d-flex flex-wrap gap-2">
+        @foreach ($category->subCategories as $subCategory)
+            <a href="{{ url('sub-category', $subCategory->id) }}" class="badge bg-secondary text-decoration-none">
+                {{ $subCategory->name }}
+            </a>
+        @endforeach
+    </div>
+
+
+    <hr class="my-4">
 
 
 
