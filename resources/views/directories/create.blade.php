@@ -33,7 +33,7 @@
 
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>التخصص الفرعي</label>
-                                    <select required name="sub_category_id" id="sub_category_id" class="form-control">
+                                    <select name="sub_category_id" id="sub_category_id" class="form-control">
                                         <option value="">اختيار التخصص الفرعي</option>
                                         {{-- Subcategories will be loaded via AJAX --}}
                                     </select>
@@ -134,27 +134,44 @@
     <script>
         $(document).ready(function() {
             $('#category_id').on('change', function() {
-                var categoryId = $(this).val();
+                const categoryId = $(this).val();
+                const subSelect = $('#sub_category_id');
+
                 if (categoryId) {
                     $.ajax({
                         url: '/get-subcategories/' + categoryId,
                         type: 'GET',
                         success: function(data) {
-                            $('#sub_category_id').empty();
-                            $('#sub_category_id').append(
+                            subSelect.empty().append(
                                 '<option value="">اختيار التخصص الفرعي</option>');
-                            $.each(data, function(key, subCategory) {
-                                $('#sub_category_id').append(
-                                    '<option value="' + subCategory.id + '">' +
-                                    subCategory.name +
-                                    '</option>'
-                                );
-                            });
+
+                            if (data.length > 0) {
+                                subSelect.prop('required', true); // ✅ make required
+                                subSelect.prop('disabled', false); // ✅ enable select
+                                $.each(data, function(i, sub) {
+                                    subSelect.append(
+                                        `<option value="${sub.id}">${sub.name}</option>`
+                                    );
+                                });
+                            } else {
+                                subSelect.prop('required', false); // ❌ not required
+                                subSelect.prop('disabled', true); // ❌ disable select
+                            }
+                        },
+                        error: function() {
+                            subSelect.empty()
+                                .append(
+                                    '<option value="">حدث خطأ أثناء تحميل التخصصات الفرعية</option>'
+                                )
+                                .prop('required', false)
+                                .prop('disabled', true);
                         }
                     });
                 } else {
-                    $('#sub_category_id').empty();
-                    $('#sub_category_id').append('<option value="">اختيار التخصص الفرعي</option>');
+                    subSelect.empty()
+                        .append('<option value="">اختيار التخصص الفرعي</option>')
+                        .prop('required', false)
+                        .prop('disabled', true);
                 }
             });
         });
