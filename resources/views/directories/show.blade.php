@@ -70,7 +70,7 @@
 
         @if (!empty($directory->telegram))
             <li>
-                <a target="_blank" href="https://t.me/{{ $directory->telegram }}">{{ $directory->telegram }}
+                <a target="_blank" href="{{ $directory->telegram }}">{{ $directory->telegram }}
                     <i class="fab fa-telegram" aria-hidden="true"></i>
                 </a>
 
