@@ -26,14 +26,12 @@
         </div>
 
 
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-
-
+        <footer
+            class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark text-light text-small text-center">
             @include('partials.footer')
-
             @stack('scripts')
-
         </footer>
+
 
     </div>
 
