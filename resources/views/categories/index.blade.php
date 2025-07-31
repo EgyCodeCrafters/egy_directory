@@ -17,25 +17,34 @@
         </div>
 
 
-
         <div class="row">
             @foreach ($categories as $category)
                 <div class="col-md-3 mb-3">
                     <div class="card bg-light mb-3">
-                        <a href="{{ url('category', $category->id) }}">
+                        <a href="{{ url('category', $category->id) }}" class="text-decoration-none text-dark">
                             <div class="card-header">
-                                <h5 class="card-title">
+                                <h5 class="card-title mb-0">
                                     {{ $category->name }}
                                 </h5>
                             </div>
-                            <div class="card-body">
-                                <p class="card-text">{{ $category->description }}</p>
-                            </div>
                         </a>
+                        @if ($category->subCategories->count())
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap gap-2">
+                                    @foreach ($category->subCategories as $subCategory)
+                                        <a href="{{ url('sub-category', $subCategory->id) }}"
+                                            class="badge bg-secondary text-decoration-none">
+                                            {{ $subCategory->name }}
+                                        </a>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endif
                     </div>
                 </div>
             @endforeach
         </div>
+
 
 
         <div class="row">
