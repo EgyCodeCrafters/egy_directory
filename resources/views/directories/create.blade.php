@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="card bg-light mb-3">
         <div class="card-body">
             <h5 class="card-title">اضفة للدليل</h5>
@@ -20,12 +19,11 @@
 
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>التخصص</label>
-                                    <select multiple required name="category_ids[]" id="category_ids"
-                                            class="form-control">
-                                        <option value="">اختصار التصنيف</option>
-                                        @foreach($categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->name}}
-                                                ( {{ $category->description}})
+                                    <select multiple required name="category_ids[]" id="category_ids" class="form-control">
+                                        <option value="">اختصار التخصص</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->name }}
+                                                ({{ $category->description }})
                                             </option>
                                         @endforeach
                                     </select>
@@ -33,15 +31,30 @@
 
 
                                 <div class="form-group col-sm-6 mb-3">
+                                    <label>التخصص الفرعي</label>
+                                    <select multiple required name="sub_category_ids[]" id="sub_category_ids"
+                                        class="form-control">
+                                        <option value="">اختصار التخصص</option>
+                                        @foreach ($sub_categories as $sub_category)
+                                            <option value="{{ $sub_category->id }}">{{ $sub_category->name }}
+                                                ({{ $sub_category->description }})
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+
+
+                                <div class="form-group col-sm-6 mb-3">
                                     <label>الوصف</label>
-                                    <textarea maxlength="200"  name="description" class="form-control"></textarea>
+                                    <textarea maxlength="200" name="description" class="form-control"></textarea>
                                 </div>
 
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>الهاتف</label>
                                     <input id="phone" oninput="updatePhoneErrorMessage()" required
-                                           pattern="^(\+)?[0-9]*$" title="مسموح بارقام انجليزية فقط" type="text"
-                                           name="phone" value="" class="form-control">
+                                        pattern="^(\+)?[0-9]*$" title="مسموح بارقام انجليزية فقط" type="text"
+                                        name="phone" value="" class="form-control">
                                     <div class="invalid-feedback" id="phone-error-message"></div>
 
                                 </div>
@@ -49,8 +62,8 @@
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>الواتساب</label>
                                     <input id="whatsapp" oninput="updateWhatsappErrorMessage()" required
-                                           pattern="^(\+)?[0-9]*$" title="مسموح بارقام انجليزية فقط" type="text"
-                                           name="whatsapp" value="" class="form-control">
+                                        pattern="^(\+)?[0-9]*$" title="مسموح بارقام انجليزية فقط" type="text"
+                                        name="whatsapp" value="" class="form-control">
                                     <div class="invalid-feedback" id="whatsapp-error-message"></div>
 
                                 </div>
@@ -117,5 +130,4 @@
             </div>
         </div>
     </div>
-
 @endsection

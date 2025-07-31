@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\CategoryDirectory;
 use App\Models\Directory;
+use App\Models\DirectorySubCategory;
+use App\Models\SubCategory;
 use Illuminate\Http\Request;
 
 class DirectoryController extends Controller
@@ -23,7 +25,6 @@ class DirectoryController extends Controller
         $directories = $query->sortable()->paginate(1000);
 
         return view('directories.index', compact('directories'));
-
     }
 
     /**
@@ -45,8 +46,15 @@ class DirectoryController extends Controller
             ]);
         }
 
-        return redirect('/')->with('success', 'تمت الاضافة بنجاح');
+        $selectedSubCategories = array_filter($request->input('sub_category_ids'));
+        foreach ($selectedSubCategories as $sub_category_id) {
+            DirectorySubCategory::create([
+                'sub_category_id' => $sub_category_id,
+                'directory_id' => $directory->id,
+            ]);
+        }
 
+        return redirect('/')->with('success', 'تمت الاضافة بنجاح');
     }
 
     /**
@@ -55,9 +63,8 @@ class DirectoryController extends Controller
     public function create()
     {
         $categories = Category::all();
-
-        return view('directories.create', compact('categories'));
-
+        $sub_categories = SubCategory::all();
+        return view('directories.create', compact('categories', 'sub_categories'));
     }
 
     /**
@@ -103,6 +110,5 @@ class DirectoryController extends Controller
             ->get();
 
         return view('directories.search', compact('directories', 'query'));
-
     }
 }
