@@ -11,14 +11,12 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request, $category_id = null)
+    public function index()
     {
-        $query = Category::query();
-
-        if ($request->id) {
-            $query->where('id', $category_id);
-        }
-        $categories = $query->sortable()->paginate(1000);
+        $categories = Category::with('subCategories')
+            ->withCount('subCategories')
+            ->orderByDesc('sub_categories_count')
+            ->get();
 
         return view('categories.index', compact('categories'));
     }
@@ -81,10 +79,9 @@ class CategoryController extends Controller
     }
 
     public function getSubcategories($id)
-{
-    $subCategories = SubCategory::where('category_id', $id)->get();
+    {
+        $subCategories = SubCategory::where('category_id', $id)->get();
 
-    return response()->json($subCategories);
-}
-
+        return response()->json($subCategories);
+    }
 }

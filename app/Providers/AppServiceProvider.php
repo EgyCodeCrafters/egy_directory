@@ -22,7 +22,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer('partials.nav', function ($view) {
-            $categories = Category::with('subCategories')->get();
+            $categories = Category::with('subCategories')
+                ->withCount('subCategories')
+                ->orderByDesc('sub_categories_count')
+                ->get();
+
             $view->with('categories', $categories);
         });
     }
