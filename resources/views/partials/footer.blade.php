@@ -9,8 +9,9 @@
 </div>
 
 
-<div id="copyright text-right">© جميع الحقوق محفوظة 2023 <a href="https://egycodecrafters.com/">egycodecrafters.com</a>
-    |
+<div id="copyright text-right">
+    © جميع الحقوق محفوظة {{ date('Y') }} — تصميم وتطوير
+    <a href="https://moatazabdalmageed.github.io/" target="_blank" rel="noopener">معتز محمدي</a> |
 
     <a href="/privacy-policy">سياسة الخصوصية</a>
 </div>
