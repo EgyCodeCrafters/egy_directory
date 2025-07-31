@@ -17,31 +17,28 @@
                                     <input required type="text" name="name" value="" class="form-control">
                                 </div>
 
+
+
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>التخصص</label>
-                                    <select multiple required name="category_ids[]" id="category_ids" class="form-control">
-                                        <option value="">اختصار التخصص</option>
+                                    <select required name="category_id" id="category_id" class="form-control">
+                                        <option value="">اختيار التخصص</option>
                                         @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->name }}
-                                                ({{ $category->description }})
+                                            <option value="{{ $category->id }}">
+                                                {{ $category->name }} ({{ $category->description }})
                                             </option>
                                         @endforeach
                                     </select>
                                 </div>
-
 
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>التخصص الفرعي</label>
-                                    <select multiple required name="sub_category_ids[]" id="sub_category_ids"
-                                        class="form-control">
-                                        <option value="">اختصار التخصص</option>
-                                        @foreach ($sub_categories as $sub_category)
-                                            <option value="{{ $sub_category->id }}">{{ $sub_category->name }}
-                                                ({{ $sub_category->description }})
-                                            </option>
-                                        @endforeach
+                                    <select required name="sub_category_id" id="sub_category_id" class="form-control">
+                                        <option value="">اختيار التخصص الفرعي</option>
+                                        {{-- Subcategories will be loaded via AJAX --}}
                                     </select>
                                 </div>
+
 
 
 
@@ -131,3 +128,35 @@
         </div>
     </div>
 @endsection
+
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('#category_id').on('change', function() {
+                var categoryId = $(this).val();
+                if (categoryId) {
+                    $.ajax({
+                        url: '/get-subcategories/' + categoryId,
+                        type: 'GET',
+                        success: function(data) {
+                            $('#sub_category_id').empty();
+                            $('#sub_category_id').append(
+                                '<option value="">اختيار التخصص الفرعي</option>');
+                            $.each(data, function(key, subCategory) {
+                                $('#sub_category_id').append(
+                                    '<option value="' + subCategory.id + '">' +
+                                    subCategory.name +
+                                    '</option>'
+                                );
+                            });
+                        }
+                    });
+                } else {
+                    $('#sub_category_id').empty();
+                    $('#sub_category_id').append('<option value="">اختيار التخصص الفرعي</option>');
+                }
+            });
+        });
+    </script>
+@endpush

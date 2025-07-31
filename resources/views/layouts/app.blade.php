@@ -8,31 +8,34 @@
 
 <body>
 
-<div class="container">
+    <div class="container">
 
 
-    @include('partials.nav')
+        @include('partials.nav')
 
-    <div class="row">
+        <div class="row">
 
-        @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
 
-        @yield('content')
+            @yield('content')
+
+        </div>
+
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+
+            @include('partials.footer')
+
+            @stack('scripts')
+
+        </footer>
 
     </div>
-
-
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-
-        @include('partials.footer')
-
-    </footer>
-
-</div>
 
 </body>
 

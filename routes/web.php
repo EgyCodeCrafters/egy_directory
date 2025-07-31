@@ -6,6 +6,7 @@ use App\Http\Controllers\DirectoryController;
 Route::get('/', [CategoryController::class, 'index']);
 Route::get('category/{category_id?}', [CategoryController::class, 'show']);
 Route::get('sub-category/{sub_category_id?}', [CategoryController::class, 'showSubCategory']);
+Route::get('/get-subcategories/{id}', [CategoryController::class, 'getSubcategories']);
 Route::get('add', [DirectoryController::class, 'create']);
 Route::post('add-directory', [DirectoryController::class, 'store']);
 Route::get('directory/{directory_id}', [DirectoryController::class, 'show']);

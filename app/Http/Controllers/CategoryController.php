@@ -79,4 +79,12 @@ class CategoryController extends Controller
     {
         //
     }
+
+    public function getSubcategories($id)
+{
+    $subCategories = SubCategory::where('category_id', $id)->get();
+
+    return response()->json($subCategories);
+}
+
 }
