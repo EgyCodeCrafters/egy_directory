@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer('partials.nav', function ($view) {
+        View::composer('*', function ($view) {
             $categories = Category::with('subCategories')
                 ->withCount('subCategories')
                 ->orderByDesc('sub_categories_count')

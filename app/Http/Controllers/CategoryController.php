@@ -13,12 +13,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::with('subCategories')
-            ->withCount('subCategories')
-            ->orderByDesc('sub_categories_count')
-            ->get();
-
-        return view('categories.index', compact('categories'));
+        return view('categories.index');
     }
 
     /**
