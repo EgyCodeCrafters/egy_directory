@@ -25,7 +25,7 @@
                                         <option value="">اختيار التخصص</option>
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}">
-                                                {{ $category->name }} ({{ $category->description }})
+                                                {{ $category->name }}
                                             </option>
                                         @endforeach
                                     </select>
