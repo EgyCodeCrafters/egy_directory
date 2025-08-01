@@ -10,7 +10,9 @@
     <div class="jumbotron">
         <h1 class="display-6">{{ $directory->name }}</h1>
         <p class="lead">{{ $directory->description }}</p>
-        <p class="lead"> <i class="fa fa-map-marker" aria-hidden="true"></i> {{ $directory->address }}</p>
+        @if (!empty($directory->address))
+            <p class="lead"> <i class="fa fa-map-marker" aria-hidden="true"></i> {{ $directory->address }}</p>
+        @endif
         <hr class="my-4">
 
 

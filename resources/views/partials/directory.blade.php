@@ -7,8 +7,13 @@
         </div>
         <div class="card-body">
             <p class="card-text">{{ \Illuminate\Support\Str::limit($directory->description, 250) }}</p>
-            <p class="card-text"> <i class="fa fa-map-marker" aria-hidden="true"></i>
-                {{ \Illuminate\Support\Str::limit($directory->address, 250) }}</p>
+
+            @if (!empty($directory->address))
+                <p class="card-text"> <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    {{ \Illuminate\Support\Str::limit($directory->address, 250) }}</p>
+            @endif
+
+
             <ul>
 
                 @if ($directory->name != 'الشيخ محمدي عبدالمجيد عبدالجيد -رحمه الله-')
