@@ -7,7 +7,8 @@
         </div>
         <div class="card-body">
             <p class="card-text">{{ \Illuminate\Support\Str::limit($directory->description, 250) }}</p>
-            <p class="card-text">{{ \Illuminate\Support\Str::limit($directory->address, 250) }}</p>
+            <p class="card-text"> <i class="fa fa-map-marker" aria-hidden="true"></i>
+                {{ \Illuminate\Support\Str::limit($directory->address, 250) }}</p>
             <ul>
 
                 @if ($directory->name != 'الشيخ محمدي عبدالمجيد عبدالجيد -رحمه الله-')
