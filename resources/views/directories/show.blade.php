@@ -10,6 +10,7 @@
     <div class="jumbotron">
         <h1 class="display-6">{{ $directory->name }}</h1>
         <p class="lead">{{ $directory->description }}</p>
+        <p class="lead">{{ $directory->address }}</p>
         <hr class="my-4">
 
 
