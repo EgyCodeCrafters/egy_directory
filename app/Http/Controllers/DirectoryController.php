@@ -32,29 +32,33 @@ class DirectoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'category_ids' => 'required',
-        ]);
-        $directory = Directory::create($request->all());
-
-        $selectedCategories = array_filter($request->input('category_ids'));
-        foreach ($selectedCategories as $category_id) {
-            CategoryDirectory::create([
-                'category_id' => $category_id,
-                'directory_id' => $directory->id,
+        try {
+            $request->validate([
+                'name' => 'required|string|max:255',
+                'category_ids' => 'required',
             ]);
-        }
+            $directory = Directory::create($request->all());
 
-        $selectedSubCategories = array_filter($request->input('sub_category_ids'));
-        foreach ($selectedSubCategories as $sub_category_id) {
-            DirectorySubCategory::create([
-                'sub_category_id' => $sub_category_id,
-                'directory_id' => $directory->id,
-            ]);
-        }
+            $selectedCategories = array_filter($request->input('category_ids'));
+            foreach ($selectedCategories as $category_id) {
+                CategoryDirectory::create([
+                    'category_id' => $category_id,
+                    'directory_id' => $directory->id,
+                ]);
+            }
 
-        return redirect('/')->with('success', 'تمت الاضافة بنجاح');
+            $selectedSubCategories = array_filter($request->input('sub_category_ids'));
+            foreach ($selectedSubCategories as $sub_category_id) {
+                DirectorySubCategory::create([
+                    'sub_category_id' => $sub_category_id,
+                    'directory_id' => $directory->id,
+                ]);
+            }
+
+            return redirect('/')->with('success', 'تمت الاضافة بنجاح');
+        }catch (\Exception $exception){
+            dd($exception->getMessage());
+        }
     }
 
     /**
