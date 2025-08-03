@@ -74,7 +74,7 @@ class DirectoryController extends Controller
 
             return redirect('/')->with('success', 'تمت الاضافة بنجاح');
         }catch (\Exception $exception){
-            dd($exception);
+            dd($exception->getmessage());
         }
     }
 
