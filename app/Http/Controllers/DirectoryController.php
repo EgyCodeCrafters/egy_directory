@@ -8,6 +8,7 @@ use App\Models\Directory;
 use App\Models\DirectorySubCategory;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DirectoryController extends Controller
 {
@@ -33,8 +34,6 @@ class DirectoryController extends Controller
     public function store(Request $request)
     {
         try {
-
-
             $category = Category::with('subCategories')->find($request->category_id);
 
             $rules = [
@@ -47,16 +46,16 @@ class DirectoryController extends Controller
             if ($category && $category->subCategories->isNotEmpty()) {
                 $rules['sub_category_id'] = 'required|exists:sub_categories,id';
             } else {
-                // Optional: make sure sub_category_id is nullable or ignored
                 $rules['sub_category_id'] = 'nullable';
             }
 
-            $request->validate($rules);
+            $validated = $request->validate($rules);
 
+            DB::beginTransaction();
 
-            $directory = Directory::create($request->all());
+            $directory = Directory::create($validated); // safer to use $validated not $request->all()
 
-            $selectedCategories = array_filter($request->input('category_ids'));
+            $selectedCategories = array_filter($request->input('category_ids') ?? []);
             foreach ($selectedCategories as $category_id) {
                 CategoryDirectory::create([
                     'category_id' => $category_id,
@@ -64,7 +63,7 @@ class DirectoryController extends Controller
                 ]);
             }
 
-            $selectedSubCategories = array_filter($request->input('sub_category_ids'));
+            $selectedSubCategories = array_filter($request->input('sub_category_ids') ?? []);
             foreach ($selectedSubCategories as $sub_category_id) {
                 DirectorySubCategory::create([
                     'sub_category_id' => $sub_category_id,
@@ -72,9 +71,13 @@ class DirectoryController extends Controller
                 ]);
             }
 
+            DB::commit();
+
             return redirect('/')->with('success', 'تمت الاضافة بنجاح');
-        }catch (\Exception $exception){
-            dd($exception->getmessage());
+
+        } catch (\Exception $exception) {
+            DB::rollBack();
+            dd($exception->getMessage());
         }
     }
 
@@ -128,6 +131,8 @@ class DirectoryController extends Controller
 
         $directories = Directory::where('name', 'LIKE', "%$query%")
             ->orWhere('description', 'LIKE', "%$query%")
+            ->orWhere('phone', 'LIKE', "%$query%")
+            ->orWhere('whatsapp', 'LIKE', "%$query%")
             ->get();
 
         return view('directories.search', compact('directories', 'query'));
