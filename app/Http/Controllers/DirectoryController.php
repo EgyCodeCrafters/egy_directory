@@ -33,11 +33,25 @@ class DirectoryController extends Controller
     public function store(Request $request)
     {
         try {
-            $request->validate([
+
+
+            $category = Category::with('subCategories')->find($request->category_id);
+
+            $rules = [
                 'name' => 'required|string|max:255',
-                'category_id' => 'required',
-                'sub_category_id' => 'required',
-            ]);
+                'category_id' => 'required|exists:categories,id',
+            ];
+
+            if ($category && $category->subCategories->isNotEmpty()) {
+                $rules['sub_category_id'] = 'required|exists:sub_categories,id';
+            } else {
+                // Optional: make sure sub_category_id is nullable or ignored
+                $rules['sub_category_id'] = 'nullable';
+            }
+
+            $request->validate($rules);
+
+
             $directory = Directory::create($request->all());
 
             $selectedCategories = array_filter($request->input('category_ids'));
