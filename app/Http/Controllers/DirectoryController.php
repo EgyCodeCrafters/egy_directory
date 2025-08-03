@@ -35,7 +35,8 @@ class DirectoryController extends Controller
         try {
             $request->validate([
                 'name' => 'required|string|max:255',
-                'category_ids' => 'required',
+                'category_id' => 'required',
+                'sub_category_id' => 'required',
             ]);
             $directory = Directory::create($request->all());
 
