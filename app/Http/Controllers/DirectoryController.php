@@ -38,8 +38,8 @@ class DirectoryController extends Controller
             $category = Category::with('subCategories')->find($request->category_id);
 
             $rules = [
-                'phone' => 'required|unique:users,phone',
-                'whatsapp' => 'nullable|unique:users,whatsapp',
+                'phone' => 'required|unique:directories,phone',
+                'whatsapp' => 'nullable|unique:directories,whatsapp',
                 'name' => 'required|string|max:255',
                 'category_id' => 'required|exists:categories,id',
             ];
