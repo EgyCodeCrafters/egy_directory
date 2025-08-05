@@ -40,13 +40,13 @@ class DirectoryController extends Controller
                 'phone' => 'required|unique:directories,phone',
                 'whatsapp' => 'nullable|unique:directories,whatsapp',
                 'name' => 'required|string|max:255',
-                'category_id' => 'required|exists:categories,id',
+                'category_ids' => 'required|exists:categories,id',
             ];
 
             if ($category && $category->subCategories->isNotEmpty()) {
-                $rules['sub_category_id'] = 'required|exists:sub_categories,id';
+                $rules['sub_category_ids'] = 'required|exists:sub_categories,id';
             } else {
-                $rules['sub_category_id'] = 'nullable';
+                $rules['sub_category_ids'] = 'nullable';
             }
 
             $validated = $request->validate($rules);
@@ -55,7 +55,7 @@ class DirectoryController extends Controller
 
             $directory = Directory::create($validated); // safer to use $validated not $request->all()
 
-            $selectedCategories = array_filter($request->input('category_ids') ?? []);
+            $selectedCategories = array_filter($request->input('category_ids'));
             foreach ($selectedCategories as $category_id) {
                 CategoryDirectory::create([
                     'category_id' => $category_id,
@@ -63,7 +63,7 @@ class DirectoryController extends Controller
                 ]);
             }
 
-            $selectedSubCategories = array_filter($request->input('sub_category_ids') ?? []);
+            $selectedSubCategories = array_filter($request->input('sub_category_ids'));
             foreach ($selectedSubCategories as $sub_category_id) {
                 DirectorySubCategory::create([
                     'sub_category_id' => $sub_category_id,
