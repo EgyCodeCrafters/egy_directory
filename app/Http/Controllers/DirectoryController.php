@@ -55,23 +55,16 @@ class DirectoryController extends Controller
 
             $directory = Directory::create($validated); // safer to use $validated not $request->all()
 
-            dump($request->input('category_id'));
-            dump($request->input('sub_category_id'));
-            $selectedCategories = array_filter($request->input('category_id') ?? []);
-            foreach ($selectedCategories as $category_id) {
-                CategoryDirectory::create([
-                    'category_id' => $category_id,
-                    'directory_id' => $directory->id,
-                ]);
-            }
 
-            $selectedSubCategories = array_filter($request->input('sub_category_id') ?? []);
-            foreach ($selectedSubCategories as $sub_category_id) {
-                DirectorySubCategory::create([
-                    'sub_category_id' => $sub_category_id,
-                    'directory_id' => $directory->id,
-                ]);
-            }
+            CategoryDirectory::create([
+                'category_id' => $request->input('category_id'),
+                'directory_id' => $directory->id,
+            ]);
+
+            DirectorySubCategory::create([
+                'sub_category_id' => $request->input('sub_category_id'),
+                'directory_id' => $directory->id,
+            ]);
 
             DB::commit();
 
