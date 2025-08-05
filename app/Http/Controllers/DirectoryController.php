@@ -55,7 +55,7 @@ class DirectoryController extends Controller
 
             $directory = Directory::create($validated); // safer to use $validated not $request->all()
 
-            $selectedCategories = array_filter($request->input('category_id'));
+            $selectedCategories = array_filter($request->input('category_id') ?? []);
             foreach ($selectedCategories as $category_id) {
                 CategoryDirectory::create([
                     'category_id' => $category_id,
@@ -63,7 +63,7 @@ class DirectoryController extends Controller
                 ]);
             }
 
-            $selectedSubCategories = array_filter($request->input('sub_category_id'));
+            $selectedSubCategories = array_filter($request->input('sub_category_id') ?? []);
             foreach ($selectedSubCategories as $sub_category_id) {
                 DirectorySubCategory::create([
                     'sub_category_id' => $sub_category_id,
