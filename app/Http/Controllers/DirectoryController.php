@@ -53,7 +53,7 @@ class DirectoryController extends Controller
 
             DB::beginTransaction();
 
-            $directory = Directory::create($validated); // safer to use $validated not $request->all()
+            $directory = Directory::create( $request->all()); // safer to use $validated not $request->all()
 
 
             CategoryDirectory::create([
