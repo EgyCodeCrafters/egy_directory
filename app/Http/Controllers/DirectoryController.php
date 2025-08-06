@@ -68,7 +68,9 @@ class DirectoryController extends Controller
 
             DB::commit();
 
-            return redirect('/')->with('success', 'تمت الاضافة بنجاح');
+            return redirect()->to("/directory/{$directory->id}")
+                ->with('success', 'تمت الاضافة بنجاح');
+
         } catch (\Exception $exception) {
             DB::rollBack();
             dd($exception->getMessage());
