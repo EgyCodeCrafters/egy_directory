@@ -61,7 +61,7 @@ class DirectoryController extends Controller
 
             DB::beginTransaction();
 
-            $directory = Directory::create( $validated);
+            $directory = Directory::create($validated);
 
 
             CategoryDirectory::create([
@@ -69,11 +69,12 @@ class DirectoryController extends Controller
                 'directory_id' => $directory->id,
             ]);
 
-            DirectorySubCategory::create([
-                'sub_category_id' => $request->input('sub_category_id'),
-                'directory_id' => $directory->id,
-            ]);
-
+            if ($request->input('sub_category_id')) {
+                DirectorySubCategory::create([
+                    'sub_category_id' => $request->input('sub_category_id'),
+                    'directory_id' => $directory->id,
+                ]);
+            }
             DB::commit();
 
             return redirect()->to("/directory/{$directory->id}")
@@ -84,8 +85,6 @@ class DirectoryController extends Controller
             dd($exception->getMessage());
         }
     }
-
-
 
 
     /**
