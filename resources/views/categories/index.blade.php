@@ -25,11 +25,11 @@
                             <div class="card-header">
                                 <h5 class="card-title mb-0 d-flex justify-content-between align-items-center">
                                     {{ $category->name }}
-                                    <span class="float-start">
-            <a class="btn btn-sm btn-info" href="{{ route('add-directory', ['category_id' => $category?->id, 'sub_category_id' => $sub_category?->id ?? '']) }}">
-                اضافة
-            </a>
-        </span>
+{{--                                    <span class="float-start">--}}
+{{--            <a class="btn btn-sm btn-info" href="#add">--}}
+{{--                اضافة--}}
+{{--            </a>--}}
+{{--        </span>--}}
                                 </h5>
                             </div>
 

@@ -7,7 +7,6 @@
         <h1 class="display-6">{{ $category->name }} </h1>
     </div>
 
-    @include('partials.add')
 
     <div class="d-flex flex-wrap gap-2">
         @foreach ($category->subCategories as $subCategory)
@@ -26,10 +25,7 @@
 
 
     @if (!count($category->directories))
-        <div class="alert alert-danger" role="alert">
-            التصنيف فارغ ٫ كن الأول اضف نشاطك للتصنيف الان <a href="/add" class="btn btn-dark">اضافة</a>
-
-        </div>
+        @include('partials.add')
     @endif
 
     <div class="row">

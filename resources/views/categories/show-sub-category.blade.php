@@ -14,19 +14,12 @@
     </div>
 
 
-    @include('partials.add')
     <hr class="my-4">
 
 
 
     @if (!count($sub_category->directories))
-        <div class="alert alert-danger" role="alert">
-            التصنيف فارغ ٫ كن الأول اضف نشاطك للتصنيف الان
-            <a href="{{ route('add-directory', ['category_id' => $sub_category->category->id, 'sub_category_id' => $sub_category->id]) }}" class="btn btn-dark">
-                اضافة
-            </a>
-        </div>
-
+        @include('partials.add')
     @endif
 
     <div class="row">

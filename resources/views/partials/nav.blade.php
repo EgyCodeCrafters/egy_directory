@@ -71,8 +71,14 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="/add" class="btn btn-primary">اضافة</a>
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+                        اضافة
+                    </button>
+
                 </li>
+
+
 
 
             </ul>
