@@ -86,17 +86,6 @@
     <script async src="https://static.addtoany.com/menu/page.js"></script>
     <!-- AddToAny END -->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            if (window.innerWidth < 992) {
-                const toggler = document.querySelector(".navbar-toggler");
-                if (toggler) {
-                    toggler.click(); // simulate click
-                }
-            }
-        });
-    </script>
-
     </body>
 
 </div>
