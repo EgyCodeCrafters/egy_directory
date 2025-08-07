@@ -23,16 +23,25 @@
                     <div class="card bg-light mb-3">
                         <a href="{{ url('category', $category->id) }}" class="text-decoration-none text-dark">
                             <div class="card-header">
-                                <h5 class="card-title mb-0">
+                                <h5 class="card-title mb-0 d-flex justify-content-between align-items-center">
                                     {{ $category->name }}
+                                    <span class="float-start">
+            <a class="btn btn-sm btn-info" href="{{ route('add-directory', ['category_id' => $category?->id, 'sub_category_id' => $sub_category?->id ?? '']) }}">
+                اضافة
+            </a>
+        </span>
                                 </h5>
                             </div>
+
                         </a>
                         @if ($category->subCategories->count())
                             <div class="card-body">
                                 <div class="d-flex flex-wrap gap-2">
                                     @foreach ($category->subCategories as $subCategory)
-                                        <a href="{{ url('sub-category', $subCategory->id) }}"
+                                        <a href="{{ url('category',[
+    'category_id'=>$category->id,
+    'sub_category_id'=>$subCategory->id,
+]) }}"
                                             class="badge bg-secondary text-decoration-none">
                                             {{ $subCategory->name }}
                                         </a>

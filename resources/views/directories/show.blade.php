@@ -98,9 +98,12 @@
                 </span>
 
                 {{-- Show only subcategories related to this directory AND this category --}}
-                @foreach ($directory->subCategories->where('category_id', $category->id) as $subcategory)
+                @foreach ($directory->subCategories->where('category_id', $category->id) as $subCategory)
                     <span class="badge alert-secondary ms-1">
-                        <a href="{{ url("sub-category/$subcategory->id") }}">{{ $subcategory->name }}</a>
+                        <a href="{{ url('category',[
+    'category_id'=>$category->id,
+    'sub_category_id'=>$directory->subCategory->id,
+]) }}">{{ $subCategory->name }}</a>
                     </span>
                 @endforeach
             </div>

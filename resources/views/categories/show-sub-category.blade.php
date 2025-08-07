@@ -1,29 +1,36 @@
-<title>دليل المنصورية | {{ $category->name }} </title>
+<title>دليل المنصورية | {{ $sub_category->name }} </title>
 
 @extends('layouts.app')
 
 @section('content')
-    <a class="dropdown-item" href="{{ url('category/' . $category->category->id) }}">
-        {{ $category->category->name }}
+    <a class="dropdown-item" href="{{ url('category/' . $sub_category->category->id) }}">
+        {{ $sub_category->category->name }}
     </a>
 
 
+
     <div class="jumbotron">
-        <h1 class="display-6">{{ $category->name }} </h1>
-        <hr class="my-4">
+        <h1 class="display-6">{{ $sub_category->name }} </h1>
     </div>
 
 
+    @include('partials.add')
+    <hr class="my-4">
 
-    @if (!count($category->directories))
+
+
+    @if (!count($sub_category->directories))
         <div class="alert alert-danger" role="alert">
-            التصنيف فارغ ٫ كن الأول واضف نفسك للتصنيف الان <a href="/add" class="btn btn-dark">اضافة</a>
-
+            التصنيف فارغ ٫ كن الأول اضف نشاطك للتصنيف الان
+            <a href="{{ route('add-directory', ['category_id' => $sub_category->category->id, 'sub_category_id' => $sub_category->id]) }}" class="btn btn-dark">
+                اضافة
+            </a>
         </div>
+
     @endif
 
     <div class="row">
-        @foreach ($category->directories as $directory)
+        @foreach ($sub_category->directories as $directory)
             @include('partials.directory')
         @endforeach
     </div>

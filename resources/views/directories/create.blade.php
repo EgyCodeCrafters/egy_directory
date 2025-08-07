@@ -22,9 +22,12 @@
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>التخصص</label>
                                     <select required name="category_id" id="category_id" class="form-control">
-                                        <option value="">اختيار التخصص</option>
+
+                                        @if(empty($category_id))
+                                            <option value="">اختيار التخصص الفرعي</option>
+                                        @endif
                                         @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}">
+                                            <option value="{{ $category->id }}" {{ ($category->id == $category_id) ? 'selected' : '' }}>
                                                 {{ $category->name }}
                                             </option>
                                         @endforeach
@@ -34,7 +37,9 @@
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>التخصص الفرعي</label>
                                     <select name="sub_category_id" id="sub_category_id" class="form-control">
-                                        <option value="">اختيار التخصص الفرعي</option>
+                                        @if(empty($sub_category_id))
+                                            <option value="">اختيار التخصص الفرعي</option>
+                                        @endif
                                         {{-- Subcategories will be loaded via AJAX --}}
                                     </select>
                                 </div>
@@ -67,7 +72,7 @@
 
                                 <div class="form-group col-sm-6 mb-3">
                                     <label>العنوان</label>
-                                    <textarea name="address" class="form-control"></textarea>
+                                    <textarea name="sub_category" class="form-control"></textarea>
                                 </div>
 
                                 <div class="form-group col-sm-6 mb-3">
@@ -133,11 +138,20 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
+
+
+
             $('#category_id').on('change', function() {
                 const categoryId = $(this).val();
                 const subSelect = $('#sub_category_id');
 
+
                 if (categoryId) {
+
+                    const selectedSubCategoryId = "{{ $sub_category_id ?? '' }}";
+
+
+
                     $.ajax({
                         url: '/get-subcategories/' + categoryId,
                         type: 'GET',
@@ -149,9 +163,8 @@
                                 subSelect.prop('required', true); // ✅ make required
                                 subSelect.prop('disabled', false); // ✅ enable select
                                 $.each(data, function(i, sub) {
-                                    subSelect.append(
-                                        `<option value="${sub.id}">${sub.name}</option>`
-                                    );
+                                    const isSelected = sub.id == selectedSubCategoryId ? 'selected' : '';
+                                    subSelect.append(`<option value="${sub.id}" ${isSelected}>${sub.name}</option>`);
                                 });
                             } else {
                                 subSelect.prop('required', false); // ❌ not required
@@ -174,6 +187,8 @@
                         .prop('disabled', true);
                 }
             });
+            $('#category_id').change();
+
         });
     </script>
 @endpush

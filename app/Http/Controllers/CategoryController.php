@@ -35,8 +35,11 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id, string $sub_category_id = null)
     {
+        if ($sub_category_id) {
+            return $this->showSubCategory($sub_category_id);
+        }
         $category = Category::with('subCategories')->find($id);
 
         return view('categories.show', compact('category'));
@@ -44,9 +47,9 @@ class CategoryController extends Controller
 
     public function showSubCategory(string $id)
     {
-        $category = SubCategory::find($id);
+        $sub_category = SubCategory::find($id);
 
-        return view('categories.show-sub-category', compact('category'));
+        return view('categories.show-sub-category', compact('sub_category'));
     }
 
     /**

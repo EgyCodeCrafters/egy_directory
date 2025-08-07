@@ -25,11 +25,14 @@
                                         {{ $category->name }}
                                     </a>
                                     <ul class="dropdown-menu">
-                                        @foreach ($category->subcategories as $subcategory)
+                                        @foreach ($category->subcategories as $subCategory)
                                             <li>
                                                 <a class="dropdown-item"
-                                                    href="{{ url("sub-category/$subcategory->id") }}">
-                                                    {{ $subcategory->name }}
+                                                    href="{{ url('category',[
+    'category_id'=>$category->id,
+    'sub_category_id'=>$subCategory->id,
+]) }}">
+                                                    {{ $subCategory->name }}
                                                 </a>
                                             </li>
                                         @endforeach

@@ -80,12 +80,20 @@ class DirectoryController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($category_id = null, $sub_category_id = null)
     {
+
         $categories = Category::all();
         $sub_categories = SubCategory::all();
-        return view('directories.create', compact('categories', 'sub_categories'));
+
+        return view('directories.create', compact(
+            'categories',
+            'sub_categories',
+            'category_id',
+            'sub_category_id'
+        ));
     }
+
 
     /**
      * Display the specified resource.
