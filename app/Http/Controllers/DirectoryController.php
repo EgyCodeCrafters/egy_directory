@@ -37,23 +37,31 @@ class DirectoryController extends Controller
             $category = Category::with('subCategories')->find($request->category_id);
 
             $rules = [
-                'phone' => 'required|unique:directories,phone',
-                'whatsapp' => 'nullable|unique:directories,whatsapp',
                 'name' => 'required|string|max:255',
                 'category_id' => 'required|exists:categories,id',
+                'sub_category_id' => 'nullable|exists:sub_categories,id',
+                'description' => 'nullable|string|max:200',
+                'phone' => 'required|unique:directories,phone|regex:/^(\+)?[0-9]*$/',
+                'whatsapp' => 'nullable|unique:directories,whatsapp|regex:/^(\+)?[0-9]*$/',
+                'sub_category' => 'nullable|string|max:255', // This looks like an address field
+                'google_map' => 'nullable|string|max:500',
+                'notes' => 'nullable|string|max:1000',
+                'email' => 'nullable|email|max:255',
+                'facebook' => 'nullable|url|max:255',
+                'twitter' => 'nullable|url|max:255',
+                'instagram' => 'nullable|url|max:255',
+                'website' => 'nullable|url|max:255',
             ];
 
             if ($category && $category->subCategories->isNotEmpty()) {
                 $rules['sub_category_id'] = 'required|exists:sub_categories,id';
-            } else {
-                $rules['sub_category_id'] = 'nullable';
             }
 
             $validated = $request->validate($rules);
 
             DB::beginTransaction();
 
-            $directory = Directory::create( $request->all()); // safer to use $validated not $request->all()
+            $directory = Directory::create( $validated);
 
 
             CategoryDirectory::create([
@@ -77,22 +85,7 @@ class DirectoryController extends Controller
         }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create($category_id = null, $sub_category_id = null)
-    {
 
-        $categories = Category::all();
-        $sub_categories = SubCategory::all();
-
-        return view('directories.create', compact(
-            'categories',
-            'sub_categories',
-            'category_id',
-            'sub_category_id'
-        ));
-    }
 
 
     /**
