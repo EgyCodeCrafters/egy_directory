@@ -42,7 +42,7 @@
     'category_id'=>$category->id,
     'sub_category_id'=>$subCategory->id,
 ]) }}"
-                                            class="badge bg-secondary text-decoration-none">
+                                            class="badge bg-secondary text-decoration-none text-white">
                                             {{ $subCategory->name }}
                                         </a>
                                     @endforeach
