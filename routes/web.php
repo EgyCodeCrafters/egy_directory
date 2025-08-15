@@ -8,7 +8,7 @@ Route::get('category/{category_id}/{sub_category_id?}', [CategoryController::cla
 Route::get('/get-subcategories/{id}', [CategoryController::class, 'getSubcategories']);
 Route::post('add-directory', [DirectoryController::class, 'store']);
 Route::get('directory/{directory_id}', [DirectoryController::class, 'show']);
-Route::post('search', [DirectoryController::class, 'search']);
+Route::get('search', [DirectoryController::class, 'search']);
 Route::get('privacy-policy', function () {
     return view('privacy-policy');
 })->name('privacy-policy');
