@@ -3,7 +3,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <a class="dropdown-item" href="{{ url('category/' . $sub_category->category->id) }}">
+    <a href="{{ url('category/' . $sub_category->category->id) }}">
         {{ $sub_category->category->name }}
     </a>
 
