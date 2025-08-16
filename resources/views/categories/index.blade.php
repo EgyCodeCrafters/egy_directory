@@ -3,20 +3,8 @@
 <div class="container">
     @section('content')
         <div class="row">
-            <div class="jumbotron">
-
-
-                <a target="_blank"
-                    href="https://www.islamweb.net/ar/article/37855/%D9%8A%D8%A7-%D8%B9%D8%A8%D8%A7%D8%AF%D9%8A-%D8%A5%D9%86%D9%8A-%D8%AD%D8%B1%D9%85%D8%AA-%D8%A7%D9%84%D8%B8%D9%84%D9%85-%D8%B9%D9%84%D9%89-%D9%86%D9%81%D8%B3%D9%8A">
-                    <p>يا عبادي : إنّي حرّمت الظلم على نفسي ، وجعـلته بيـنكم محرما ؛ فلا تـظـالـمـوا</p>
-                </a>
-                <h1 class="display-6">أهلا بكم في دليل المنصورية</h1>
-                <p class="lead">خدمة مجانية لتسهيل الوصول لأصحاب المهن وأرباب الحرف.</p>
-
-            </div>
+            <p class="lead">خدمة مجانية لتسهيل الوصول لأصحاب المهن وأرباب الحرف.</p>
         </div>
-
-
         <div class="row">
             @foreach ($categories as $category)
                 <div class="col-md-3 mb-3">
