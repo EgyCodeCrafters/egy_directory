@@ -4,6 +4,15 @@
     @section('content')
         <div class="row">
             <p class="lead">خدمة مجانية لتسهيل الوصول لأصحاب المهن وأرباب الحرف.</p>
+
+            <form method="get" action="/search" class="d-flex">
+                <input required class="form-control me-2" name="query" type="search" placeholder="بحث"
+                       aria-label="بحث"
+                       value="{{ request('query') }}"
+                >
+                <button class="btn btn-outline-dark" type="submit">بحث</button>
+            </form>
+
         </div>
         <div class="row">
             @foreach ($categories as $category)
