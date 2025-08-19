@@ -87,3 +87,5 @@
         </div>
     </div>
 </nav>
+
+@include('partials.search')
