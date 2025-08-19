@@ -101,7 +101,7 @@
                 @foreach ($directory->subCategories->where('category_id', $category->id) as $subCategory)
                     <span class="badge alert-secondary ms-1">
                         <a href="{{ url('category',[
-    'category_id'=>$category->id,
+    'category_id'=>$subCategory->category->id,
     'sub_category_id'=>$directory->subCategory?->id ?? '',
 ]) }}">{{ $subCategory->name }}</a>
                     </span>
