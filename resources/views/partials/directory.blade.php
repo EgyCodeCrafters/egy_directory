@@ -118,7 +118,7 @@
             @endforeach
 
                 <a href="{{ url('backoffice/directories/' . $directory->id . '/edit') }}"
-                   class=" d-none text-blue-600 hover:underline flex items-center gap-1 hidden" >
+                   class=" d-none text-blue-600 hover:underline flex items-center gap-1 edit-link" >
                     <i class="fa fa-edit"></i> Edit
                 </a>
 
