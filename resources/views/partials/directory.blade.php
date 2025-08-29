@@ -7,7 +7,10 @@
         </div>
         <div class="card-body">
 
-            <img src="{{ $directory->image_url }}" alt="Directory Image" style="max-width:200px; height:auto;">
+            @if($directory->image_url)
+    <img src="{{ $directory->image_url }}" alt="Directory Image" style="max-width:200px; height:auto;">
+@endif
+
 
 
 
