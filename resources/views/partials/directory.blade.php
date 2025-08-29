@@ -6,6 +6,11 @@
             </a>
         </div>
         <div class="card-body">
+
+            <img src="{{ $directory->image_url }}" alt="Directory Image" style="max-width:200px; height:auto;">
+
+
+
             <p class="card-text">{{ \Illuminate\Support\Str::limit($directory->description, 250) }}</p>
 
             @if (!empty($directory->address))

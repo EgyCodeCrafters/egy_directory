@@ -51,6 +51,7 @@ class DirectoryController extends Controller
                 'twitter' => 'nullable|url|max:255',
                 'instagram' => 'nullable|url|max:255',
                 'website' => 'nullable|url|max:255',
+                'image_url' => 'nullable|url',
             ];
 
             if ($category && $category->subCategories->isNotEmpty()) {

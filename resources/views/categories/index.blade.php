@@ -24,6 +24,7 @@
                         </a>
                         @if ($category->subCategories->count())
                             <div class="card-body">
+
                                 <div class="d-flex flex-wrap gap-2">
                                     @foreach ($category->subCategories as $subCategory)
                                         <a href="{{ url('category',[

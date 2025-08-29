@@ -139,6 +139,9 @@
                                             <div class="form-group col-sm-6 mb-3">
                                                 <label>الموقع الالكرتوني</label>
                                                 <input type="text" name="website" value="" class="form-control">
+                                            </div>  <div class="form-group col-sm-6 mb-3">
+                                                <label>رابط اللوجو / الشعار</label>
+                                                <input type="text" name="image_url" value="" class="form-control">
                                             </div>
 
                                         </div>

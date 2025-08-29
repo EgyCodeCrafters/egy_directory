@@ -37,6 +37,7 @@ class Directory extends ApiModel
         'telegram',
         'cv_link',
         'is_approved',
+        'image_url',
 
     ];
 

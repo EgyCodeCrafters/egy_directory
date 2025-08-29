@@ -34,7 +34,7 @@ class DirectoryResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')->required()->maxLength(255),
-      
+
 
                     Select::make('categories')
     ->relationship('categories', 'name')
@@ -47,7 +47,7 @@ class DirectoryResource extends Resource
     ->multiple()
     ->searchable()
     ->preload(),
-    
+
 
                 // Select::make('country_id')
                 //     ->relationship('country', 'name')
@@ -73,6 +73,11 @@ class DirectoryResource extends Resource
                 TextInput::make('telegram')->url(),
                 // TextInput::make('cv_link')->url(),
                 Toggle::make('is_approved')->inline(),
+               TextInput::make('image_url')
+                    ->label('Image URL')
+                    ->url()
+                    ->suffixIcon('heroicon-o-link')
+                    ->columnSpanFull()
             ]);
     }
 
@@ -86,6 +91,9 @@ class DirectoryResource extends Resource
                 Tables\Columns\TextColumn::make('city.name')->label('City')->sortable(),
                 Tables\Columns\IconColumn::make('is_approved')->boolean()->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime()->sortable(),
+                Tables\Columns\ImageColumn::make('image_url')
+                    ->label('Image')
+                    ->square(), // optional: crop square
             ])
             ->filters([
                 TernaryFilter::make('is_approved')

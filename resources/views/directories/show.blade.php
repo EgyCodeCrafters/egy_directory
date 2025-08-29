@@ -8,6 +8,10 @@
 @section('content')
 
     <div class="jumbotron">
+
+        <img src="{{ $directory->image_url }}" alt="Directory Image" style="max-width:200px; height:auto;">
+
+
         <h1 class="display-6">{{ $directory->name }}</h1>
         <p class="lead">{{ $directory->description }}</p>
         @if (!empty($directory->address))

@@ -15,6 +15,7 @@
                             <h5 class="card-title"> {{ $directory->name }}</h5>
                         </div>
                         <div class="card-body">
+                            <img src="{{ $directory->image_url }}" alt="Directory Image" style="max-width:200px; height:auto;">
                             <p class="card-text">{{ $directory->description }}</p>
                         </div>
                     </a>
