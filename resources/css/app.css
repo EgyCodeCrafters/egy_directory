@@ -58,3 +58,6 @@ a {
 .dropdown-submenu:hover>.dropdown-menu {
     display: block;
 }
+.hidden{
+    display: none;
+}
